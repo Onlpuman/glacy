@@ -1,0 +1,70 @@
+.performance {
+	position: relative;
+
+	padding: 0 27px;
+	margin: 280px auto 0;
+
+	&__controls {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		margin-top: 22px;
+	}
+
+	&__heading {
+		font-weight: bold;
+		font-size: 60px;
+		line-height: 60px;
+		/* or 100% */
+		text-align: center;
+
+		color: #FFFFFF;
+	}
+
+	
+	&__button {
+		font-size: 32px;
+		line-height: 44px;
+		/* identical to box height, or 137% */
+
+		color: #FFFFFF;
+
+		padding: 10px 40px;
+		margin-top: 22px;
+	}
+
+	.performance__controls.hiden {
+		display: none;
+	}
+
+	.performance__controls.slide-current {
+		display: flex;
+	}
+
+ 
+	&__slider {
+		position: absolute;
+		top: 164px;
+	}
+
+	&__bullet {
+		width: 21px;
+		height: 21px;
+		border: 2px solid #FFFFFF;
+		border-radius: 50%;
+		background-color: transparent;
+
+		margin-right: 5px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.current {
+		background: #FFF;
+	}
+}
+
+

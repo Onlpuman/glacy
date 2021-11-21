@@ -1,0 +1,56 @@
+.promo {
+	padding: 0 27px;
+	margin-bottom: 40px;
+
+	&__cards {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+
+		width: 560px;
+		height: 229px;
+
+		padding: 18px 17px;
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 35px;
+		line-height: 41px;
+		/* identical to box height, or 117% */
+		color: #FFFFFF;
+	}
+
+	&__text {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 22px;
+		/* or 122% */
+		color: #FFFFFF;
+
+		margin-top: 16px;
+	}
+
+	.button {
+	 	align-self: flex-end;
+	 	border-radius: 26px;
+
+	 	padding: 14px 22px;
+		margin-top: 41px;
+	}
+}
+
+
+.promo__card--left {
+	background: url(../image/main/main/promo/crimson_bg.png);
+}
+
+.promo__card--right {
+	background: url(../image/main/main/promo/chocolate_bg.png);
+}
+
+

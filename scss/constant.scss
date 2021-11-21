@@ -1,0 +1,66 @@
+// кнопке теперь не нужно задавать ширину в каждом месте её использования, теперь она везде одинаковая
+.button {
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+	display: inline-block; // теперь не будет увеличиваться в высоту если окажется внутри флекс контейнера
+	/* padding: 10px 14px; */ // текст центруется за счёт падинга //Макс.Приходится применять к каждой кнопке
+	text-align: center; // и немножно родного text-align :)
+
+	/* текст */
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 24px;
+	color: white;
+	text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+
+	/* подложка */
+	background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+	box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+	border-radius: 50px;
+
+	&:hover {
+		background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+		box-shadow: 0px 2px 2px #AC1000;
+	}
+
+	&:active {
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+		box-shadow: inset 0px 2px 2px #942718;
+	}
+}
+
+.site__bg-1 {
+	background: url(../image/main/header/ice.png) center top no-repeat;
+	background-color: $bg1;
+	transition: background 0.25s ease;
+}
+
+.site__bg-2 {
+	background: url(../image/main/header/ice_2.png) center top no-repeat;
+	background-color: $bg2;
+	transition: background 0.25s ease;
+}
+
+.site__bg-3 {
+	background: url(../image/main/header/ice_3.png) center top no-repeat;
+	background-color: $bg3;
+	transition: background 0.25s ease;
+}
+
+.site__bg-catalog {
+	background-color: $bg1;
+}
+
+
+.container {
+	width: 1200px;
+	margin: 0 auto 40px;
+}
+
+main {
+	/* Прибиваю футер */
+	flex:1 1 auto;
+
+	// это ты молодец, что прибил футер :) а заодно можно было отцентовать весь main и задать ширину в одном месте
+}

@@ -1,0 +1,22 @@
+$bg1: #849D8F;
+$bg2: #8996A6;
+$bg3: #9D8B84;
+
+%b {
+	outline: 0.5px solid red;
+}
+/* @extend %b; */
+
+
+body {
+	/* Прибиваю футер */
+	display: flex;
+	flex-direction: column;
+
+	font-family: "Roboto","Arial",sans-serif;
+
+	img {
+		max-width: 100%
+	}
+}
+

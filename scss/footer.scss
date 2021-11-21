@@ -1,0 +1,97 @@
+.footer {
+	padding: 0 27px;
+	margin-bottom: 20px;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__social {
+		display: flex;
+	}
+
+	&__network {
+		cursor: pointer;
+		margin-right: 8px;
+	}
+
+	&__svg {
+		width: 32px;
+  	height: 32px;
+
+  	border: 2px solid rgba(255, 255, 255, 0.5);
+		border-radius: 50%;
+
+		&:hover path, &:hover g {
+		  fill: #fff;
+		  fill-opacity: 1;
+		  opacity: 1;
+		}
+
+		&:active {
+			border: 2px solid rgba(255, 255, 255, 0.7);
+		}
+
+
+	}
+
+	&__links {
+		display: grid;
+    grid-template-columns: 140px 190px;
+		
+		position: relative; /* для сердечка */
+		margin-left: 30px;
+	}
+
+
+	&__link {
+		/* сердечко */
+		&:first-child {
+			font-weight: bold;
+			
+			&:before {
+
+				content: "";
+				display: block;
+				background: url(../image/main/footer/heart.svg) 0 0/contain no-repeat;
+				height: 16px;
+  			width: 14px;
+  			
+  			position: absolute;
+  			left: 0px;
+  			top: 6px;
+			}
+		}
+
+		font-weight: normal;
+		font-size: 13px;
+		line-height: 18px;
+		/* or 138% */
+
+		color: #FFFFFF;
+
+		padding: 2px 0 2px 22px;
+
+		&:hover {
+				color: #FFBC9E;
+			}
+	}
+
+	&__copyright {
+
+	}
+
+	&__logo {
+
+	}
+
+	&__author {
+		font-weight: normal;
+		font-size: 12px;
+		line-height: 18px;
+		/* or 150% */
+		color: #FFFFFF;
+	}
+}

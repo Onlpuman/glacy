@@ -1,0 +1,197 @@
+.catalog {
+	padding: 0 27px;
+}
+
+.path {
+	&__link {
+		line-height: 16px;
+		
+		color: #FFFFFF;
+	}
+
+	span {
+		line-height: 16px;
+		
+		color: #FFFFFF;
+	}
+}
+
+.title {
+	font-weight: bold;
+	font-size: 35px;
+	line-height: 41px;
+	
+	color: #FFFFFF;
+}
+
+.filter {
+	width: 80%;
+
+	span {
+		font-size: 16px;
+		line-height: 18px;
+		color: #fff;
+	}
+
+
+	&__form {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;	
+	}
+
+	&__sort {
+		svg {
+			position: absolute;
+			top: 30px;
+			left: 171px;
+		}
+	}
+ 
+	&__select {
+		width: 196px;
+		height: 36px;
+
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 20px;
+
+		padding: 10px 17px;
+
+		appearance: none;
+
+		option {
+			text-color: #fff;
+		}
+	}
+
+	&__name {
+		display: block;
+		line-height: 16px;
+	
+		color: #FFFFFF;
+	}
+
+	&__price {}
+
+	&__price-slider {
+		width: 218px;
+		height: 36px;
+
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 20px;
+	}
+
+	&__fatness {}
+
+	&__fatness-input {
+		display: flex;
+		align-items: center;
+		
+		width: 425px;
+		height: 36px;
+
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 20px;
+
+		padding: 0 14px;
+
+		input, span {
+			margin-right: 10px;
+		}
+	}
+
+	&__fillers {}
+
+	&__fillers-input {
+		display: flex;
+		align-items: center;
+		
+		width: 711px;
+		height: 36px;
+
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 20px;
+	}
+
+	&__button {
+		width: 144px;
+	  height: 36px;
+
+	  font-size: 16px;
+	  line-height: 18px;
+	  color: #fff;
+
+	  background: rgba(255, 255, 255, 0.2);
+	  border: 2px solid #fff;
+		border-radius: 20px;
+	  
+	  cursor: pointer;
+	}
+}
+
+.filter-move {
+	margin-right: 15px;
+}
+
+
+.goods {
+	&__items {}
+	&__item {}
+	&__ice {}
+	&__cost {}
+	&__name {}
+	&__button {}
+}
+.line-1 {
+}
+.line-2 {
+}
+.line-3 {
+}
+
+.page-slider {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	min-height: 114px;
+
+	padding: 0 27px;
+
+	&__item {
+		width: 26px;
+		height: 26px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		font-size: 16px;
+		line-height: 18px;
+		
+
+		color: #FFF;
+
+		margin-right: 4px;
+
+
+		&:active, {
+			border-radius: 50%;
+			background: #FFF;
+
+			color: #323232;
+		}
+
+		&:hover {
+			border-radius: 50%;
+			background: rgba(255, 255, 255, 0.2);
+		}
+
+		&:nth-child(1) {
+			border-radius: 50%;
+			background: #FFF;
+
+			color: #323232;
+		}
+	}
+}

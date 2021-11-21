@@ -1,0 +1,56 @@
+.about {
+	padding: 0 27px;
+	
+	&__inner {
+		height: 100%;
+		width: 100%;
+
+		background: url(../image/main/main/about/bg.png) no-repeat;
+		border-radius: 16px;
+
+		padding: 26px 22px;
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 30px;
+		/* or 125% */
+		color: #323232;
+
+		/* padding: 24px 22px 0; */
+	}
+
+	&__items {
+		display: grid;
+    grid-template-columns: 1fr 1fr;
+	}
+
+	&__item {
+		position: relative;
+	}
+
+	&__logo {
+		position: absolute;
+		top: 10px;
+		left: 0px;
+	}
+	
+	&__logo--move{
+		left: 12px;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 22px;
+		/* or 137% */
+
+		color: #323232;
+
+		padding: 20px 0 0 56px;
+	}
+
+	&__text--move {
+		 padding-left: 68px;
+	}
+}
