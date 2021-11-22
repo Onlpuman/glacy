@@ -3,82 +3,94 @@
 const navSearch = document.querySelector('.nav__search');
 const navSearchForm = document.querySelector('.nav__search-form');
 
-let timeoutIdSearch;
+let timeoutId;
 
-navSearch.addEventListener('mouseenter', () => {
-    clearTimeout(timeoutIdSearch);
+navSearch.addEventListener("mouseenter", function() {
+    clearTimeout(timeoutId);
     navSearchForm.style.display = 'flex';
 })
 
-navSearch.addEventListener('mouseleave', () => {
-    timeoutIdSearch = setTimeout(() => {
+navSearch.addEventListener("mouseleave", function() {
+        console.log(1)
+    timeoutId = setTimeout(() => {
         navSearchForm.style.display = 'none';
-    }, 25);
+    }, 500)
+
+    // clearTimeout(timeoutId);
 })
 
-navSearchForm.addEventListener('mouseenter', () => {
-    clearTimeout(timeoutIdSearch);
+navSearchForm.addEventListener("mouseenter", function () {
+    navSearchForm.style.display = 'flex';
+    clearTimeout(timeoutId);
 })
 
-navSearchForm.addEventListener('mouseleave', () => {
-    timeoutIdSearch = setTimeout(() => {
-        navSearchForm.style.display = 'none';
-    }, 25);
-})
 
 // entrance
-const navEntry = document.querySelector('.nav__entry');
-const navEntryForm = document.querySelector('.nav__entry-form');
+// const navEntry = document.querySelector('.nav__entry');
+// const navEntryForm = document.querySelector('.nav__entry-form');
 
-let timeoutIdEntry;
+// // basket
+// const navBasket = document.querySelector('.nav__basket');
+// const navBasketForm = document.querySelector('.nav__basket-container');
 
-navEntry.addEventListener('mouseenter', () => {
-    clearTimeout(timeoutIdEntry);
-    navEntryForm.style.display = 'flex';
-})
+// const buttons = document.querySelectorAll('.js-nav-item');
+// const forms = document.querySelectorAll('.js-nav-dropdown');
 
-navEntry.addEventListener('mouseleave', () => {
-    timeoutIdEntry = setTimeout(() => {
-        navEntryForm.style.display = 'none';
-    }, 25);
-})
+// function createButtonDropdown(activeButton, activeMenu) {
+//     let timeoutId; // undefined
 
-navEntryForm.addEventListener('mouseenter', () => {
-    clearTimeout(timeoutIdEntry);
-})
+//     activeButton.addEventListener('mouseenter', () => {
+//         buttons[0].classList.remove('active');
+//         buttons[1].classList.remove('active');
+//         buttons[2].classList.remove('active');
 
-navEntryForm.addEventListener('mouseleave', () => {
-    timeoutIdEntry = setTimeout(() => {
-        navEntryForm.style.display = 'none';
-    }, 25);
-})
+//         function Array() {
 
-// basket
-const navBasket = document.querySelector('.nav__basket');
-const navBasketForm = document.querySelector('.nav__basket-container');
+//         }
 
-let timeoutIdBasket;
+//         Array.protype.forEach = function(callback) {
+//             const array = this;
 
-navBasket.addEventListener('mouseenter', () => {
-    clearTimeout(timeoutIdBasket);
-    navBasketForm.style.display = 'block';
-})
+//             for (let i = 0; i < array.length; i++) {
+//                 callback(array[i])
+//             }
+//         }
+        
+//         buttons.forEach(removeActive);
 
-navBasket.addEventListener('mouseleave', () => {
-    timeoutIdBasket = setTimeout(() => {
-        navBasketForm.style.display = 'none';
-    }, 25);
-})
+//         function removeActive(button) {
+//             button.classList.remove('active');
+//         }
 
-navBasketForm.addEventListener('mouseenter', () => {
-    clearTimeout(timeoutIdBasket);
-})
+//         forms.forEach(form => form.style.display = 'none');
 
-navBasketForm.addEventListener('mouseleave', () => {
-    timeoutIdBasket = setTimeout(() => {
-        navBasketForm.style.display = 'none';
-    }, 25);
-})
+//         clearTimeout(timeoutId);
+//         activeButton.classList.add('active');
+//         activeMenu.style.display = 'flex';
+//     })
+
+//     activeButton.addEventListener('mouseleave', () => {
+//         timeoutId = setTimeout(() => {
+//             activeMenu.style.display = 'none';
+//             activeButton.classList.remove('active');
+//         }, 1000);
+//     })
+
+//     activeMenu.addEventListener('mouseenter', () => {
+//         clearTimeout(timeoutId);
+//     })
+
+//     activeMenu.addEventListener('mouseleave', () => {
+//         timeoutId = setTimeout(() => {
+//             activeMenu.style.display = 'none';
+//             activeButton.classList.remove('active');
+//         }, 1000);
+//     })
+// }
+
+// createButtonDropdown(navSearch, navSearchForm);
+// createButtonDropdown(navEntry, navEntryForm);
+// createButtonDropdown(navBasket, navBasketForm);
 
 
 // Слайдер bullets //
@@ -129,3 +141,6 @@ if (bullet1) {
               sliderTitle3.classList.add("slide-current");
        });
 }
+
+
+

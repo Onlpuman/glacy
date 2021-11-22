@@ -38,6 +38,21 @@
 		/* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
 		
 		margin-left: 10px;
+		cursor: pointer;
+		height: 32px;
+
+		&.active,
+		&:hover {
+			background: #F8F7F4;
+
+			span {
+				color: #000;
+			}
+
+			.nav__svg {
+			 fill: #000;
+			}	
+		}
 	}
 
 	&__main-link {
@@ -56,20 +71,14 @@
 
 	&__search {
 		width: 32px;
-		height: 32px;
-		cursor: pointer;
 	}
 
 	&__entry {
 		width: 92px;
-		height: 32px;
-		cursor: pointer;
 	}
 
 	&__basket {
 		width: 100px;
-		height: 32px;
-		cursor: pointer;
 	}
 
 	&__basket-container {
@@ -126,18 +135,6 @@
 		padding-left: 15px;
 	}
 
-	/* search hover */
-	/* &__search:hover &__search-form {
-		display: flex;
-	} */
-
-	&__search:hover.item {
-		background: #F8F7F4;
-	}
-
-	&__search:hover &__svg {
-		 fill: #000;
-	}
 
 	&__search-input:hover {
 		box-shadow: 0 0 1px 2px #d7d7d7;
@@ -206,23 +203,6 @@
 	&__entry-button {	
 		line-height: 16px;
 		padding: 14px 26px;
-	}
-
-	/* entry hover */
-	/* &__entry:hover &__entry-form {
-		display: flex;
-	} */
-
-	&__entry:hover.item {
-		background: #F8F7F4;
-	}
-
-	&__entry:hover &__svg {
-		fill: #000;
-	}
-
-	&__entry:hover span {
-		color: #000;
 	}
 
 	&__entry-input:hover {
@@ -343,24 +323,6 @@
 
 			margin-top: 8px;
 		}
-	}
-
-	/* basket hover */
-
-	/* &__basket:hover &__basket-container {
-		display: block;
-	} */
-
-	&__basket:hover.item {
-		background: #F8F7F4;
-	}
-
-	&__basket:hover &__svg {
-		 fill: #000;
-	}
-
-	&__basket:hover &__main-link span {
-		color: #000;
 	}
 }
 
