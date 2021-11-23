@@ -1,96 +1,80 @@
 // Отображение форм в nav
+
 // Search
 const navSearch = document.querySelector('.nav__search');
 const navSearchForm = document.querySelector('.nav__search-form');
 
 let timeoutId;
 
-navSearch.addEventListener("mouseenter", function() {
+navSearch.addEventListener("mouseenter", () => {
     clearTimeout(timeoutId);
     navSearchForm.style.display = 'flex';
 })
 
-navSearch.addEventListener("mouseleave", function() {
-        console.log(1)
+navSearch.addEventListener("mouseleave", () => {
     timeoutId = setTimeout(() => {
         navSearchForm.style.display = 'none';
     }, 500)
-
-    // clearTimeout(timeoutId);
-})
-
-navSearchForm.addEventListener("mouseenter", function () {
-    navSearchForm.style.display = 'flex';
-    clearTimeout(timeoutId);
 })
 
 
-// entrance
-// const navEntry = document.querySelector('.nav__entry');
-// const navEntryForm = document.querySelector('.nav__entry-form');
+//entrance
+const navEntry = document.querySelector('.nav__entry');
+const navEntryForm = document.querySelector('.nav__entry-form');
 
-// // basket
-// const navBasket = document.querySelector('.nav__basket');
-// const navBasketForm = document.querySelector('.nav__basket-container');
+// basket
+const navBasket = document.querySelector('.nav__basket');
+const navBasketForm = document.querySelector('.nav__basket-container');
 
-// const buttons = document.querySelectorAll('.js-nav-item');
-// const forms = document.querySelectorAll('.js-nav-dropdown');
+const buttons = document.querySelectorAll('.js-nav-item');
+const forms = document.querySelectorAll('.js-nav-dropdown');
 
-// function createButtonDropdown(activeButton, activeMenu) {
-//     let timeoutId; // undefined
+createButtonDropdown(navSearch, navSearchForm);
+createButtonDropdown(navEntry, navEntryForm);
+createButtonDropdown(navBasket, navBasketForm);
 
-//     activeButton.addEventListener('mouseenter', () => {
-//         buttons[0].classList.remove('active');
-//         buttons[1].classList.remove('active');
-//         buttons[2].classList.remove('active');
+function createButtonDropdown(activeButton, activeMenu) {
+    let timeoutId;
 
-//         function Array() {
+    activeButton.addEventListener('mouseenter', () => {
+                
+        buttons.forEach(removeActive);
 
-//         }
+        function removeActive(button) {
+            button.classList.remove('active');
+        }
 
-//         Array.protype.forEach = function(callback) {
-//             const array = this;
+        forms.forEach(form => form.style.display = 'none');
 
-//             for (let i = 0; i < array.length; i++) {
-//                 callback(array[i])
-//             }
-//         }
-        
-//         buttons.forEach(removeActive);
+        clearTimeout(timeoutId);
+        activeButton.classList.add('active');
+        activeMenu.style.display = 'flex';
+    })
 
-//         function removeActive(button) {
-//             button.classList.remove('active');
-//         }
+    activeButton.addEventListener('mouseleave', () => {
+        timeoutId = setTimeout(() => {
+            activeMenu.style.display = 'none';
+            activeButton.classList.remove('active');
+        }, 1000);
+    })
 
-//         forms.forEach(form => form.style.display = 'none');
+    activeMenu.addEventListener('mouseenter', () => {
+        clearTimeout(timeoutId);
+    })
 
-//         clearTimeout(timeoutId);
-//         activeButton.classList.add('active');
-//         activeMenu.style.display = 'flex';
-//     })
+    activeMenu.addEventListener('mouseleave', () => {
+        timeoutId = setTimeout(() => {
+            activeMenu.style.display = 'none';
+            activeButton.classList.remove('active');
+        }, 1000);
+    })
+}
 
-//     activeButton.addEventListener('mouseleave', () => {
-//         timeoutId = setTimeout(() => {
-//             activeMenu.style.display = 'none';
-//             activeButton.classList.remove('active');
-//         }, 1000);
-//     })
 
-//     activeMenu.addEventListener('mouseenter', () => {
-//         clearTimeout(timeoutId);
-//     })
 
-//     activeMenu.addEventListener('mouseleave', () => {
-//         timeoutId = setTimeout(() => {
-//             activeMenu.style.display = 'none';
-//             activeButton.classList.remove('active');
-//         }, 1000);
-//     })
-// }
 
-// createButtonDropdown(navSearch, navSearchForm);
-// createButtonDropdown(navEntry, navEntryForm);
-// createButtonDropdown(navBasket, navBasketForm);
+
+
 
 
 // Слайдер bullets //
