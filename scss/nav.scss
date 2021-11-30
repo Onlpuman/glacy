@@ -98,9 +98,45 @@
 		z-index: 1;
 	}
 
+	&__feedback-container {
+		display: none;
+		position: fixed;
+		top: 330px;
+		right: calc(50% - 239px);
+
+		width: 478px;
+		height: 441px;
+
+		background: #F8F7F4;
+		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+		border-radius: 4px;
+
+		z-index: 2;
+
+		padding: 23px;
+	}
+
 	
 	/*_________________Скрытые формы_________________ */
+
+	.input {
+		background: #FFF;
+		border: 1px solid #D3D3D2;
+		border-radius: 4px;
+
+		font-size: 14px;
+		line-height: 16px;
+		outline: 0;
+
+		padding-left: 15px;
+
+		&:hover {
+			box-shadow: 0 0 1px 2px #d7d7d7;
+		}
+	}
 	/* Search */
+
+
 
 	&__search-form {
 		position: absolute;
@@ -124,20 +160,6 @@
 	&__search-input {
 		width: 311px;
 		height: 44px;
-		background: #FFFFFF;
-		border: 1px solid #D3D3D2;
-		border-radius: 4px;
-
-		font-size: 14px;
-		line-height: 16px;
-		outline: 0;
-
-		padding-left: 15px;
-	}
-
-
-	&__search-input:hover {
-		box-shadow: 0 0 1px 2px #d7d7d7;
 	}
 
 	/* _______________________________*/
@@ -166,15 +188,6 @@
 	&__entry-input { /* Здесь тоже не нужна ширина? */
 		width: 241px;
 		height: 44px;
-		background: #FFF;
-		border: 1px solid #D3D3D2;
-		border-radius: 4px;
-
-		font-size: 14px;
-		line-height: 16px;
-		outline: 0;
-
-		padding: 14px;
 	}
 
 	&__entry-flex {
@@ -203,10 +216,6 @@
 	&__entry-button {	
 		line-height: 16px;
 		padding: 14px 26px;
-	}
-
-	&__entry-input:hover {
-		box-shadow: 0 0 1px 2px #d7d7d7;
 	}
 
 	/* _______________________________*/
@@ -287,7 +296,6 @@
 			
 			color: #323232;
 		}
-
 	}
 
 	&__basket-button {	
@@ -323,6 +331,53 @@
 
 			margin-top: 8px;
 		}
+	}
+
+	/* _______________________________*/
+	/* feedback */
+
+
+	&__feedback {
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	&__feedback-heading {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 28px;
+	
+		color: #323232;
+
+		margin-bottom: 24px
+	}
+
+	&__feedback-input {
+		width: 267px;
+		height: 44px;
+
+		margin-bottom: 20px;
+	}
+
+	&__feedback-textarea {
+		width: 428px;
+		height: 154px;
+
+		margin-bottom: 20px;
+
+		padding: 15px
+
+	}
+
+	&__feedback-flex {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__feedback-button {
+		width: 140px;
+		height: 44px;
 	}
 }
 
