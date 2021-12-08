@@ -511,8 +511,17 @@ main {
 }
 
 .path__link {
+  position: relative;
   line-height: 16px;
   color: #FFFFFF;
+  text-decoration: underline 1.5px solid rgba(255, 255, 255, 0.2);
+}
+.path__link::after {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: url(../image/main/catalog/quote.svg);
 }
 .path span {
   line-height: 16px;
@@ -560,8 +569,11 @@ main {
   display: block;
   line-height: 16px;
   color: #FFFFFF;
+  margin-left: 17px;
 }
 .filter__price-slider {
+  display: flex;
+  justify-content: center;
   width: 218px;
   height: 36px;
   background: rgba(255, 255, 255, 0.2);
