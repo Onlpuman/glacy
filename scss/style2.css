@@ -132,7 +132,7 @@ body img {
 
 .container {
   width: 1200px;
-  margin: 0 auto 40px;
+  margin: 0 auto;
 }
 
 main {
@@ -142,6 +142,7 @@ main {
 
 .nav {
   padding: 9px 27px 0;
+  margin: 0 auto 280px;
   /*_________________Скрытые формы_________________ */
   /* Search */
   /* _______________________________*/
@@ -236,7 +237,7 @@ main {
   background: #F8F7F4;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
-  z-index: 2;
+  z-index: 3;
   padding: 23px;
 }
 .nav .input {
@@ -387,16 +388,14 @@ main {
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
-  /* identical to box height, or 114% */
   color: #FFFFFF;
+  margin-bottom: 8px;
 }
 .nav__contacts .item-tel {
   font-weight: bold;
   font-size: 22px;
   line-height: 24px;
-  /* identical to box height, or 109% */
   color: #FFFFFF;
-  margin-top: 8px;
 }
 .nav__feedback {
   display: flex;
@@ -432,6 +431,7 @@ main {
 .menu {
   position: relative;
   display: flex;
+  z-index: 1;
 }
 .menu__catalog:hover .link {
   color: #323232;
@@ -450,8 +450,7 @@ main {
   color: #FFFFFF;
   text-decoration: underline 1.5px solid rgba(255, 255, 255, 0.2);
   padding: 6px 13px;
-  margin-right: 6px;
-  margin-bottom: 6px;
+  margin: 0 6px 8px 0;
 }
 .menu .link:hover {
   color: #323232;
@@ -477,7 +476,6 @@ main {
   line-height: 16px;
   color: #323232;
   margin-top: 4.5px;
-  /* padding-top: 16px;*/
   padding-left: 20px;
 }
 .menu .link__submenu:first-child {
@@ -510,18 +508,23 @@ main {
   padding: 0 27px;
 }
 
+.path {
+  display: flex;
+  align-items: center;
+  margin-top: -300px;
+}
 .path__link {
   position: relative;
   line-height: 16px;
   color: #FFFFFF;
   text-decoration: underline 1.5px solid rgba(255, 255, 255, 0.2);
+  margin-right: 20px;
 }
 .path__link::after {
-  display: inline-block;
   position: absolute;
-  top: 0;
-  left: 0;
-  content: url(../image/main/catalog/quote.svg);
+  top: -1px;
+  left: 60px;
+  content: url(../image/catalog/quote.svg);
 }
 .path span {
   line-height: 16px;
@@ -533,6 +536,7 @@ main {
   font-size: 35px;
   line-height: 41px;
   color: #FFFFFF;
+  margin-bottom: 24px;
 }
 
 .filter {
@@ -569,7 +573,7 @@ main {
   display: block;
   line-height: 16px;
   color: #FFFFFF;
-  margin-left: 17px;
+  margin: 0 0 6px 17px;
 }
 .filter__price-slider {
   display: flex;
@@ -609,17 +613,18 @@ main {
   border: 2px solid #fff;
   border-radius: 20px;
   cursor: pointer;
+  margin-top: 5px;
 }
 
 .filter-move {
-  margin-right: 15px;
+  margin: 0 15px 15px 0;
 }
 
 .page-slider {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  min-height: 114px;
+  margin-bottom: 52px;
   padding: 0 27px;
 }
 .page-slider__item {
@@ -650,7 +655,6 @@ main {
 
 .goods {
   padding: 0 27px;
-  margin-bottom: 0;
   /* Подложка */
   /* Подложка Конец */
 }
@@ -660,6 +664,7 @@ main {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 .goods__item {
   position: relative;
@@ -668,7 +673,6 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 267px;
-  margin-bottom: 40px;
 }
 .goods__item:hover::after {
   content: "";
@@ -698,6 +702,7 @@ main {
 .goods__ice {
   position: relative;
   z-index: 1;
+  margin-bottom: 10px;
 }
 .goods__hit {
   display: flex;
@@ -734,23 +739,27 @@ main {
   /* or 137% */
   text-align: center;
   color: #FFFFFF;
-  margin-top: 10px;
   z-index: 1;
 }
 .goods__name span {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.goods .line-1 {
+.goods .visible-1 {
   z-index: 2;
 }
-.goods .line-2 {
+.goods .visible-2 {
   z-index: 1;
 }
-.goods .line-3 {
+.goods .visible-3 {
   z-index: 0;
 }
 
+.goods-catalog-move {
+  margin-bottom: 80px;
+}
+
 .footer {
+  position: relative;
   padding: 0 27px;
   margin-bottom: 20px;
 }
@@ -758,6 +767,15 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.footer__inner::before {
+  content: "";
+  display: block;
+  width: 1146px;
+  height: 1px;
+  position: absolute;
+  top: -22px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .footer__social {
   display: flex;

@@ -132,7 +132,7 @@ body img {
 
 .container {
   width: 1200px;
-  margin: 0 auto 40px;
+  margin: 0 auto;
 }
 
 main {
@@ -142,6 +142,7 @@ main {
 
 .nav {
   padding: 9px 27px 0;
+  margin: 0 auto 280px;
   /*_________________Скрытые формы_________________ */
   /* Search */
   /* _______________________________*/
@@ -236,7 +237,7 @@ main {
   background: #F8F7F4;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
-  z-index: 2;
+  z-index: 3;
   padding: 23px;
 }
 .nav .input {
@@ -387,16 +388,14 @@ main {
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
-  /* identical to box height, or 114% */
   color: #FFFFFF;
+  margin-bottom: 8px;
 }
 .nav__contacts .item-tel {
   font-weight: bold;
   font-size: 22px;
   line-height: 24px;
-  /* identical to box height, or 109% */
   color: #FFFFFF;
-  margin-top: 8px;
 }
 .nav__feedback {
   display: flex;
@@ -432,6 +431,7 @@ main {
 .menu {
   position: relative;
   display: flex;
+  z-index: 1;
 }
 .menu__catalog:hover .link {
   color: #323232;
@@ -450,8 +450,7 @@ main {
   color: #FFFFFF;
   text-decoration: underline 1.5px solid rgba(255, 255, 255, 0.2);
   padding: 6px 13px;
-  margin-right: 6px;
-  margin-bottom: 6px;
+  margin: 0 6px 8px 0;
 }
 .menu .link:hover {
   color: #323232;
@@ -477,7 +476,6 @@ main {
   line-height: 16px;
   color: #323232;
   margin-top: 4.5px;
-  /* padding-top: 16px;*/
   padding-left: 20px;
 }
 .menu .link__submenu:first-child {
@@ -509,7 +507,7 @@ main {
 .performance {
   position: relative;
   padding: 0 27px;
-  margin: 280px auto 0;
+  margin: 0 auto 40px;
 }
 .performance__controls {
   display: flex;
@@ -524,6 +522,7 @@ main {
   /* or 100% */
   text-align: center;
   color: #FFFFFF;
+  margin-bottom: 22px;
 }
 .performance__button {
   font-size: 32px;
@@ -531,7 +530,6 @@ main {
   /* identical to box height, or 137% */
   color: #FFFFFF;
   padding: 10px 40px;
-  margin-top: 22px;
 }
 .performance .performance__controls.hiden {
   display: none;
@@ -579,6 +577,7 @@ main {
   line-height: 41px;
   /* identical to box height, or 117% */
   color: #FFFFFF;
+  margin-bottom: 16px;
 }
 .promo__text {
   font-weight: bold;
@@ -586,13 +585,12 @@ main {
   line-height: 22px;
   /* or 122% */
   color: #FFFFFF;
-  margin-top: 16px;
+  margin-bottom: 41px;
 }
 .promo .button {
   align-self: flex-end;
   border-radius: 26px;
   padding: 14px 22px;
-  margin-top: 41px;
 }
 
 .promo__card--left {
@@ -605,7 +603,6 @@ main {
 
 .goods {
   padding: 0 27px;
-  margin-bottom: 0;
   /* Подложка */
   /* Подложка Конец */
 }
@@ -615,6 +612,7 @@ main {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 .goods__item {
   position: relative;
@@ -623,7 +621,6 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 267px;
-  margin-bottom: 40px;
 }
 .goods__item:hover::after {
   content: "";
@@ -653,6 +650,7 @@ main {
 .goods__ice {
   position: relative;
   z-index: 1;
+  margin-bottom: 10px;
 }
 .goods__hit {
   display: flex;
@@ -689,24 +687,28 @@ main {
   /* or 137% */
   text-align: center;
   color: #FFFFFF;
-  margin-top: 10px;
   z-index: 1;
 }
 .goods__name span {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.goods .line-1 {
+.goods .visible-1 {
   z-index: 2;
 }
-.goods .line-2 {
+.goods .visible-2 {
   z-index: 1;
 }
-.goods .line-3 {
+.goods .visible-3 {
   z-index: 0;
+}
+
+.goods-catalog-move {
+  margin-bottom: 80px;
 }
 
 .about {
   padding: 0 27px;
+  margin-bottom: 40px;
 }
 .about__inner {
   height: 100%;
@@ -751,6 +753,7 @@ main {
 
 .news {
   padding: 0 27px;
+  margin-bottom: 40px;
 }
 .news__cards {
   display: flex;
@@ -772,6 +775,7 @@ main {
   line-height: 22px;
   /* or 137% */
   color: #323232;
+  margin-bottom: 4px;
 }
 .news__card-left .news__text {
   display: inline-block;
@@ -781,7 +785,6 @@ main {
   /* or 125% */
   color: #323232;
   text-decoration: underline;
-  margin-top: 4px;
 }
 .news__card-left .news__text:hover {
   color: #E84D37;
@@ -817,12 +820,12 @@ main {
   line-height: 22px;
   /* or 137% */
   color: #5A5A5A;
+  margin-bottom: 40px;
 }
 
 /* форма */
 .news__form {
   display: flex;
-  margin-top: 40px;
 }
 .news__input {
   line-height: 42px;
@@ -845,7 +848,7 @@ main {
   width: 1200px;
   height: 430px;
   background: url(../image/main/main/map/map.png) 0 0/contain no-repeat;
-  margin: 0 auto;
+  margin: 0 auto 18px;
 }
 .map__feedback {
   position: absolute;
@@ -879,6 +882,7 @@ main {
 }
 
 .footer {
+  position: relative;
   padding: 0 27px;
   margin-bottom: 20px;
 }
@@ -886,6 +890,15 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.footer__inner::before {
+  content: "";
+  display: block;
+  width: 1146px;
+  height: 1px;
+  position: absolute;
+  top: -22px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .footer__social {
   display: flex;
