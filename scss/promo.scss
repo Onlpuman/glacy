@@ -23,6 +23,8 @@
 		line-height: 41px;
 		/* identical to box height, or 117% */
 		color: #FFFFFF;
+
+		margin-bottom: 16px;
 	}
 
 	&__text {
@@ -32,7 +34,9 @@
 		/* or 122% */
 		color: #FFFFFF;
 
-		margin-top: 16px;
+		margin-bottom: 41px;
+
+		
 	}
 
 	.button {
@@ -40,7 +44,6 @@
 	 	border-radius: 26px;
 
 	 	padding: 14px 22px;
-		margin-top: 41px;
 	}
 }
 

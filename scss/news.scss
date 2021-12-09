@@ -1,5 +1,6 @@
 .news {
 	padding: 0 27px;
+	margin-bottom: 40px;
 
 	&__cards {
 		display: flex;
@@ -28,6 +29,8 @@
 			/* or 137% */	
 			color: #323232;
 
+			margin-bottom: 4px;
+
 			// здесь был маржин, теперь это паддинг у карточки
 		}
 
@@ -41,7 +44,7 @@
 
 			text-decoration: underline;
 
-			margin-top: 4px; // отступ остался только сверху, боковой теперь у карточки
+			// margin-top: 4px; // отступ остался только сверху, боковой теперь у карточки / Перенес в .news__title
 
 			&:hover {
 				color: #E84D37;
@@ -92,6 +95,8 @@
 			/* or 137% */
 			color: #5A5A5A;
 
+			margin-bottom: 40px;
+
 			 // отступы теперь у карточки
 		}
 	}
@@ -105,7 +110,7 @@
 
 	&__form {
 		display: flex;
-		margin-top: 40px; // остальные оступы теперь у карточки
+		// margin-top: 40px; // остальные оступы теперь у карточки / перенес в .news__text
 	}
 
 	&__input {
