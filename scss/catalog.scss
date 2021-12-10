@@ -3,6 +3,7 @@
 	// margin-bottom: 25px;
 }
 
+// PATH
 .path {
 	display: flex;
 	align-items: center;
@@ -32,6 +33,7 @@
 		color: #FFFFFF
 	}
 }
+// PATH END
 
 .title {
 	font-weight: bold;
@@ -43,6 +45,7 @@
 	margin-bottom: 24px;
 }
 
+// FILTER
 .filter {
 	width: 80%;
 
@@ -52,36 +55,11 @@
 		color: #fff;
 	}
 
-
 	&__form {
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;	
-	}
-
-	&__sort {
-		svg {
-			position: absolute;
-			top: 30px;
-			left: 171px;
-		}
-	}
- 
-	&__select {
-		width: 196px;
-		height: 36px;
-
-		background: rgba(255, 255, 255, 0.2);
-		border-radius: 20px;
-
-		padding: 10px 17px;
-
-		appearance: none;
-
-		option {
-			text-color: #fff;
-		}
 	}
 
 	&__name {
@@ -91,7 +69,40 @@
 		color: #FFFFFF;
 
 		margin: 0 0 6px 17px;
+	}	
+
+	// SORT
+	&__sort {
+		svg {
+			position: absolute;
+			top: 37px;
+			left: 170px;
+			cursor: pointer;
+		}
 	}
+ 
+	&__select {
+		width: 196px;
+		height: 36px;
+
+		font-size: 16px;
+		color: #fff;
+
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 20px;
+
+		padding-left: 17px;
+
+		appearance: none;
+		cursor: pointer;
+
+		option {
+			color: #000;
+		}
+	}
+	// SORT END
+
+
 
 	&__price {}
 
@@ -106,10 +117,13 @@
 		border-radius: 20px;
 	}
 
+	// FATNESS
 	&__fatness {}
 
-	&__fatness-input {
+	 &__fatness-inputs {
+		// position: relative;
 		display: flex;
+		justify-content: space-evenly;
 		align-items: center;
 		
 		width: 425px;
@@ -118,12 +132,60 @@
 		background: rgba(255, 255, 255, 0.2);
 		border-radius: 20px;
 
-		padding: 0 14px;
+		label {
+			display: flex;
+			position: relative;
 
-		input, span {
-			margin-right: 10px;
+			cursor: pointer;
+			user-select: none;
+		}
+
+		input {
+			position: absolute;
+			cursor: pointer;
+			width: 0;
+			height: 0;
+			z-index: -1;
+			opacity: 0;
+		}
+
+		.check {
+			width: 22px;
+		  height: 22px;
+		  flex: 0 0 auto;
+		  border: 3.5px solid #fff;
+		  border-radius: 50%;
+		  margin-right: 11px;
+		}
+
+	 .check:after {
+	  	display: none;
+			content: '';
+			position: absolute;
+	  	top: 7px;
+		  left: 7px;
+		  width: 8px;
+		  height: 8px;
+		  border-radius: 50%;
+		  background: #fff;
+		}
+
+		span {
+			display: inline-flex;
+			align-items: center;
+		}
+
+		input:checked+.check:after {
+			display: block;
 		}
 	}
+	// FATNESS END
+
+
+
+
+
+
 
 	&__fillers {}
 
@@ -155,6 +217,7 @@
 	  margin-top: 5px;
 	}
 }
+// FILTER END
 
 .filter-move {
 	margin: 0 15px 15px 0;
@@ -221,3 +284,5 @@
 		}
 	}
 }
+
+

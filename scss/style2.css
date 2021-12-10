@@ -553,27 +553,31 @@ main {
   flex-wrap: wrap;
   align-items: center;
 }
-.filter__sort svg {
-  position: absolute;
-  top: 30px;
-  left: 171px;
-}
-.filter__select {
-  width: 196px;
-  height: 36px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  padding: 10px 17px;
-  appearance: none;
-}
-.filter__select option {
-  text-color: #fff;
-}
 .filter__name {
   display: block;
   line-height: 16px;
   color: #FFFFFF;
   margin: 0 0 6px 17px;
+}
+.filter__sort svg {
+  position: absolute;
+  top: 37px;
+  left: 170px;
+  cursor: pointer;
+}
+.filter__select {
+  width: 196px;
+  height: 36px;
+  font-size: 16px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding-left: 17px;
+  appearance: none;
+  cursor: pointer;
+}
+.filter__select option {
+  color: #000;
 }
 .filter__price-slider {
   display: flex;
@@ -583,17 +587,54 @@ main {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
 }
-.filter__fatness-input {
+.filter__fatness-inputs {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
   width: 425px;
   height: 36px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  padding: 0 14px;
 }
-.filter__fatness-input input, .filter__fatness-input span {
-  margin-right: 10px;
+.filter__fatness-inputs label {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.filter__fatness-inputs input {
+  position: absolute;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  z-index: -1;
+  opacity: 0;
+}
+.filter__fatness-inputs .check {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  border: 3.5px solid #fff;
+  border-radius: 50%;
+  margin-right: 11px;
+}
+.filter__fatness-inputs .check:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+}
+.filter__fatness-inputs span {
+  display: inline-flex;
+  align-items: center;
+}
+.filter__fatness-inputs input:checked + .check:after {
+  display: block;
 }
 .filter__fillers-input {
   display: flex;
