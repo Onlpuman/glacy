@@ -564,6 +564,7 @@ main {
   top: 37px;
   left: 170px;
   cursor: pointer;
+  fill: #fff;
 }
 .filter__select {
   width: 196px;
@@ -579,6 +580,12 @@ main {
 .filter__select option {
   color: #000;
 }
+.filter__select:hover {
+  color: #323232;
+}
+.filter__select:hover + svg {
+  fill: #323232;
+}
 .filter__price-slider {
   display: flex;
   justify-content: center;
@@ -587,22 +594,31 @@ main {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
 }
-.filter__fatness-inputs {
+.filter .fatness-size {
+  width: 425px;
+  height: 36px;
+}
+.filter .fillers-size {
+  width: 711px;
+  height: 36px;
+}
+.filter__features-inputs {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 425px;
-  height: 36px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
+  /* input:hover+.fillers-check:after {
+  	background: #fff;
+  } */
 }
-.filter__fatness-inputs label {
+.filter__features-inputs label {
   display: flex;
   position: relative;
   cursor: pointer;
   user-select: none;
 }
-.filter__fatness-inputs input {
+.filter__features-inputs input {
   position: absolute;
   cursor: pointer;
   width: 0;
@@ -610,15 +626,15 @@ main {
   z-index: -1;
   opacity: 0;
 }
-.filter__fatness-inputs .check {
+.filter__features-inputs .fatness-check {
   width: 22px;
   height: 22px;
   flex: 0 0 auto;
-  border: 3.5px solid #fff;
+  border: 3.5px solid rgba(255, 255, 255, 0.8);
   border-radius: 50%;
   margin-right: 11px;
 }
-.filter__fatness-inputs .check:after {
+.filter__features-inputs .fatness-check:after {
   display: none;
   content: "";
   position: absolute;
@@ -627,22 +643,44 @@ main {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
 }
-.filter__fatness-inputs span {
-  display: inline-flex;
-  align-items: center;
+.filter__features-inputs .fillers-check {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  border: 1.8px solid rgba(255, 255, 255, 0.8);
+  border-radius: 14%;
+  margin-right: 12px;
 }
-.filter__fatness-inputs input:checked + .check:after {
+.filter__features-inputs .fillers-check:after {
+  display: none;
+  content: url(../image/catalog/checkbox-on.svg);
+  position: absolute;
+  left: -0.5px;
+  top: 0px;
+}
+.filter__features-inputs input:checked + .fatness-check:after {
   display: block;
 }
-.filter__fillers-input {
-  display: flex;
+.filter__features-inputs input:hover + .fatness-check {
+  border-color: #fff;
+}
+.filter__features-inputs input:hover + .fatness-check:after {
+  background: #fff;
+}
+.filter__features-inputs input:checked + .fillers-check {
+  border: none;
+}
+.filter__features-inputs input:checked + .fillers-check:after {
+  display: block;
+}
+.filter__features-inputs input:hover + .fillers-check {
+  border-color: #fff;
+}
+.filter__features-inputs span {
+  display: inline-flex;
   align-items: center;
-  width: 711px;
-  height: 36px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
 }
 .filter__button {
   width: 144px;
@@ -655,6 +693,14 @@ main {
   border-radius: 20px;
   cursor: pointer;
   margin-top: 5px;
+}
+.filter__button:hover {
+  color: #323232;
+  background: #fff;
+}
+.filter__button:active {
+  box-shadow: inset 0px 2px 1px #696969;
+  border: none;
 }
 
 .filter-move {
