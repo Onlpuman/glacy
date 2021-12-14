@@ -36,7 +36,6 @@
 		/* Подложка */
 		background: rgba(255, 255, 255, 0.2);
 		border-radius: 20px;
-		/* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
 		
 		margin-left: 10px;
 		cursor: pointer;
@@ -56,7 +55,18 @@
 		}
 	}
 
-	&__main-link {
+	.item-catalog {
+		/* Подложка */
+		background: #fff;
+		border-radius: 20px;
+
+		span {
+			font-weight: 600;
+			color: #000;
+		}		
+	}
+
+	&__link {
 		display: flex;
 		align-items: center;
 
@@ -80,6 +90,10 @@
 
 	&__basket {
 		width: 100px;
+	}
+
+	&__basket-catalog {
+		width: 118px;
 	}
 
 	&__basket-container {
@@ -389,17 +403,6 @@
 	display: flex;
 	z-index: 1;
 
-	&__catalog:hover .link {
-		color: #323232;
-		
-		background: #FFFFFF;
-		border-radius: 26px;
-	}
-
-	&__catalog:hover .menu__submenu {
-		display: block;
-	}
-
 	.link {
 		display: inline-block;
 		vertical-align: baseline;
@@ -408,19 +411,20 @@
 		font-size: 16px;
 		line-height: 18px;
 
+		padding: 6px 13px;
+		margin: 0 6px 8px 0;
+
 		color: #FFFFFF;
 
 		text-decoration: underline 1.5px solid rgba(255, 255, 255, 0.2);
+	}
 
-		padding: 6px 13px;
-		margin: 0 6px 8px 0;
-		
-		&:hover {
-			color: #323232;
-		
-			background: #FFFFFF;
-			border-radius: 26px;
-		}
+
+	.link-catalog {
+		color: #fff;
+		background: #D07058;
+		border-radius: 26px;
+		text-decoration: none;
 	}
 
 	&__submenu {
@@ -487,5 +491,33 @@
 		&:active {
 			background-color: #F6B5A5;
 		}
+	}
+
+	.link__submenu-active {
+		color: #fff;
+		background-color: #D07058;
+
+		&:hover, 
+		&:active {
+			background-color: #D07058;
+		}
+
+	}
+
+
+	&__main:hover .link {
+		color: #323232;
+		
+		background: #FFFFFF;
+		border-radius: 26px;
+	}
+
+	&__main:hover .menu__submenu {
+		display: block;
+	}
+
+
+	&__catalog:hover .menu__submenu {
+		display: block;
 	}
 }
