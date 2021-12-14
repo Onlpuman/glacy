@@ -12,22 +12,22 @@
             <nav class="nav">
                 <div class="nav__flex">
                     <div class="nav__flex-1"> 
-                        <a class="nav__logo" href="ya.ru">
+                        <a class="nav__logo" href="index.html">
                             <img src="image/main/header/logo.svg" alt="логотип glacyshop" width="154" height="64">
                         </a>
                         <div class="menu">
                             <div class="menu__catalog">
-                                <a href="" class="link">Каталог</a>
+                                <a href="#" class="link link-catalog">Каталог</a>
                                 <div class="menu__submenu">
-                                    <a href="" class="link__submenu">Новинки</a>
-                                    <a href="" class="link__submenu">Сливочное</a>
-                                    <a href="" class="link__submenu">Щербеты</a>
-                                    <a href="" class="link__submenu">Фруктовый лед</a>
-                                    <a href="" class="link__submenu">Мелорин</a>
+                                    <a href="#" class="link__submenu">Новинки</a>
+                                    <a href="#" class="link__submenu link__submenu-active">Сливочное</a>
+                                    <a href="#" class="link__submenu">Щербеты</a>
+                                    <a href="#" class="link__submenu">Фруктовый лед</a>
+                                    <a href="#" class="link__submenu">Мелорин</a>
                                 </div>
                             </div>
-                            <a href="" class="link">Доставка и оплата</a>
-                            <a href="" class="link">О компании</a>
+                            <a href="#" class="link">Доставка и оплата</a>
+                            <a href="#" class="link">О компании</a>
                         </div>
                     </div>
                     <div class="nav__flex-2">
@@ -46,7 +46,7 @@
 
 
                             <div class="nav__entry item js-nav-item">
-                                <a class="nav__main-link" href="">
+                                <a class="nav__link" href="#">
                                     <svg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'> 
                                         <path class="nav__svg" d='M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z' fill='white'/><path class="nav__svg" d='M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z' fill='white'/>
                                     </svg>
@@ -58,20 +58,22 @@
                                     <div class="nav__entry-flex">
                                         <button class="nav__entry-button button" type="submit">Войти</button>
                                         <div class="nav__entry-links">
-                                            <a class="nav__entry-link" href="">Забыли пароль?</a>
-                                            <span class="nav__entry-link js-nav_entry-link" href="">Новая регистрация</span>
+                                            <a class="nav__entry-link" href="#">Забыли пароль?</a>
+                                            <span class="nav__entry-link js-nav_entry-link" href="#">Новая регистрация</span>
                                         </div>
                                     </div>  
                                 </form>
                             </div>
                            
-                            <div class="nav__basket item js-nav-item">
-                                <a class="nav__main-link" href="">
-                                    <svg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                                        <path class="nav__svg" d='M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z' fill='white' />
-                                        <path class="nav__svg" d='M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z' fill='white' />
+                            <div class="nav__basket nav__basket-catalog item item-catalog js-nav-item">
+                                <a class="nav__link" href="#">
+                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" fill="#343434"/>
+                                        <path d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" fill="#343434"/>
+                                        <path d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z" fill="#343434"/>
+                                        <path d="M5.93506 4.03003L6.97297 13H17.5032L18.6923 4.03003H5.93506Z" fill="#E84D37"/>
                                     </svg>
-                                    <span>Пусто</span>
+                                    <span>2 товара</span>
                                 </a>
                                 <div class="nav__basket-container js-nav-dropdown">
                                     <form class="nav__basket-form" action="#" method="get">
@@ -124,15 +126,15 @@
     <main class="container">
         <section class="catalog">
             <section class="path">
-                <a class="path__link" href="">Главная</a>
-                <a class="path__link" href="">Каталог</a>
+                <a class="path__link" href="#">Главная</a>
+                <a class="path__link" href="#">Каталог</a>
                 <span>Сливочное</span>
             </section>
             <h1 class="title">Сливочное мороженое</h1>            
             <section class="filter">
                 <form class="filter__form" action="#" method="get">
                     <div class="filter__sort filter-move">
-                        <label for="sort" class="filter__name">Сортировка</label>
+                        <label class="filter__name" for="sort" >Сортировка</label>
                         <select class="filter__select" name="sort" id="sort">
                             <option value="popular" selected>по популярности</option>
                             <option value="expensive">сначала дорогие</option>
@@ -219,7 +221,7 @@
                         <img src="image/main/main/goods/ice_1.png" alt="ice-cream">
                         <p class="goods__cost">310 ₽<span>/кг</span></p>
                     </div>
-                    <a href="" class="goods__name"><span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
+                    <a href="#" class="goods__name"><span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
                     <a href class="goods__button button">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
@@ -227,7 +229,7 @@
                         <img src="image/main/main/goods/ice_2.png" alt="ice-cream">
                         <p class="goods__cost">380 ₽<span>/кг</span></p>
                     </div>
-                    <a href="" class="goods__name"><span>Сливочно-кофейное с кусочками шоколада</span></a>
+                    <a href="#" class="goods__name"><span>Сливочно-кофейное с кусочками шоколада</span></a>
                     <a href class="goods__button button">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
@@ -235,7 +237,7 @@
                         <img src="image/main/main/goods/ice_3.png" alt="ice-cream">
                         <p class="goods__cost">355 ₽<span>/кг</span></p>
                     </div>
-                    <a href="" class="goods__name"><span>Сливочно-клубничное с присыпкой из белого шоколада</span></a>
+                    <a href="#" class="goods__name"><span>Сливочно-клубничное с присыпкой из белого шоколада</span></a>
                     <a href class="goods__button button">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
@@ -243,7 +245,7 @@
                         <img src="image/main/main/goods/ice_4.png" alt="ice-cream">
                         <p class="goods__cost">415 ₽<span>/кг</span></p>
                     </div>
-                    <a href="" class="goods__name"><span>Сливочное крем-брюле с карамельной подливкой</span></a>
+                    <a href="#" class="goods__name"><span>Сливочное крем-брюле с карамельной подливкой</span></a>
                     <a href class="goods__button button">Быстрый просмотр</a>
                 </div>
             </div>
@@ -253,7 +255,7 @@
                         <img src="image/main/main/goods/ice_5.png" alt="ice-cream">
                         <p class="goods__cost">325 ₽<span>/кг</span></p>
                     </div>
-                    <a href="" class="goods__name"><span>Сливочное с брусничным<br>джемом</span></a>
+                    <a href="#" class="goods__name"><span>Сливочное с брусничным<br>джемом</span></a>
                     <a href class="goods__button button">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
@@ -261,7 +263,7 @@
                         <img src="image/main/main/goods/ice_6.png" alt="ice-cream">
                         <p class="goods__cost">410 ₽<span>/кг</span></p>
                     </div>
-                    <a href="" class="goods__name"><span>Сливочно-черничное с цельными ягодами черники</span></a>
+                    <a href="#" class="goods__name"><span>Сливочно-черничное с цельными ягодами черники</span></a>
                     <a href class="goods__button button">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
@@ -269,7 +271,7 @@
                         <img src="image/main/main/goods/ice_7.png" alt="ice-cream">
                         <p class="goods__cost">315 ₽<span>/кг</span></p>
                     </div>
-                    <a href="" class="goods__name"><span>Сливочно-лимонное с карамельной присыпкой</span></a>
+                    <a href="#" class="goods__name"><span>Сливочно-лимонное с карамельной присыпкой</span></a>
                     <a href class="goods__button button">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
@@ -277,7 +279,7 @@
                         <img src="image/main/main/goods/ice_8.png" alt="ice-cream">
                         <p class="goods__cost">320 ₽<span>/кг</span></p>
                     </div>
-                    <a href="" class="goods__name"><span>Сливочное с шоколадной стружкой</span></a>
+                    <a href="#" class="goods__name"><span>Сливочное с шоколадной стружкой</span></a>
                     <a href class="goods__button button">Быстрый просмотр</a>
                 </div>
             </div>                
@@ -287,7 +289,7 @@
                         <img src="image/main/main/goods/ice_9.png" alt="ice-cream">
                         <p class="goods__cost">440 ₽<span>/кг</span></p>
                     </div>
-                    <a href="" class="goods__name"><span>Сливочно-ванильное<br>с кусочками шоколада</span></a>
+                    <a href="#" class="goods__name"><span>Сливочно-ванильное<br>с кусочками шоколада</span></a>
                     <a href class="goods__button button">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
@@ -295,7 +297,7 @@
                         <img src="image/main/main/goods/ice_10.png" alt="ice-cream">
                         <p class="goods__cost">435 ₽<span>/кг</span></p>
                     </div>
-                    <a href="" class="goods__name"><span>Сливочноe с ментоловым<br>сиропом</span></a>
+                    <a href="#" class="goods__name"><span>Сливочноe с ментоловым<br>сиропом</span></a>
                     <a href class="goods__button button">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
@@ -303,7 +305,7 @@
                         <img src="image/main/main/goods/ice_11.png" alt="ice-cream">
                         <p class="goods__cost">355 ₽<span>/кг</span></p>
                     </div>
-                    <a href="" class="goods__name"><span>Сливочное с кусочками черного шоколада</span></a>
+                    <a href="#" class="goods__name"><span>Сливочное с кусочками черного шоколада</span></a>
                     <a href class="goods__button button">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
@@ -311,18 +313,18 @@
                         <img src="image/main/main/goods/ice_12.png" alt="ice-cream">
                         <p class="goods__cost">420 ₽<span>/кг</span></p>
                     </div>
-                    <a href="" class="goods__name"><span>Сливочное с мятным сиропом</span></a>
+                    <a href="#" class="goods__name"><span>Сливочное с мятным сиропом</span></a>
                     <a href class="goods__button button">Быстрый просмотр</a>
                 </div>
             </div>
         </section>
         <div class="page-slider">
-            <a href="" class="page-slider__item">1</a>
-            <a href="" class="page-slider__item">2</a>
-            <a href="" class="page-slider__item">3</a>
-            <a href="" class="page-slider__item">4</a>
-            <a href="" class="page-slider__item">5</a>
-            <a href="" class="page-slider__item">
+            <a href="#" class="page-slider__item">1</a>
+            <a href="#" class="page-slider__item">2</a>
+            <a href="#" class="page-slider__item">3</a>
+            <a href="#" class="page-slider__item">4</a>
+            <a href="#" class="page-slider__item">5</a>
+            <a href="#" class="page-slider__item">
                 <img src="image/catalog/icon-right.svg" alt="Переход на следующую страницу">
             </a>
         </div>
@@ -350,13 +352,13 @@
                 </a>
                 </div>
                 <div class="footer__links">
-                    <a class="footer__link" href="">Для поставщиков</a>
-                    <a class="footer__link" href="">Наши документы</a>
-                    <a class="footer__link" href="">О производстве</a>
-                    <a class="footer__link" href="">Экологические стандарты</a>
+                    <a class="footer__link" href="#">Для поставщиков</a>
+                    <a class="footer__link" href="#">Наши документы</a>
+                    <a class="footer__link" href="#">О производстве</a>
+                    <a class="footer__link" href="#">Экологические стандарты</a>
                 </div>
                 <div class="footer__copyright">
-                    <a class="footer__logo" href=""><object type="image/svg+xml" data="image/main/footer/academy.svg"></object></a>
+                    <a class="footer__logo" href="#"><object type="image/svg+xml" data="image/main/footer/academy.svg"></object></a>
                     <p class="footer__author">Сделано в HTML Academy &copy; 2019</p>
                 </div>
             </div>
