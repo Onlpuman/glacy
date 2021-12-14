@@ -1,6 +1,6 @@
 .catalog {
 	padding: 0 27px;
-	// margin-bottom: 25px;
+	margin-bottom: 25px;
 }
 
 // PATH
@@ -92,10 +92,15 @@
 		background: rgba(255, 255, 255, 0.2);
 		border-radius: 20px;
 
-		padding-left: 17px;
+		padding: 0 17px;
 
 		appearance: none;
+		-webkit-appearance: none;
+  	-moz-appearance: none;
+
 		cursor: pointer;
+
+
 
 		option {
 			color: #000;
@@ -106,11 +111,9 @@
 		color: #323232;
 	}
 
-	&__select:hover+svg {
+	&__select:hover + svg path {
 		fill:  #323232;
 	}
-
-
 	// SORT END
 
 
@@ -171,7 +174,8 @@
 			width: 22px;
 		  height: 22px;
 		  flex: 0 0 auto;
-		  border: 3.5px solid rgba(255, 255, 255, 0.8);
+		  border: 3.5px solid #fff;
+		  opacity: 0.8;
 		  border-radius: 50%;
 		  margin-right: 11px;
 		}
@@ -185,14 +189,15 @@
 		  width: 8px;
 		  height: 8px;
 		  border-radius: 50%;
-		  background: rgba(255, 255, 255, 0.8);
+		  background: #fff;
 		}
 
 		.fillers-check {
 			width: 20px;
 		  height: 20px;
 		  flex: 0 0 auto;
-		  border: 1.8px solid rgba(255, 255, 255, 0.8);
+		  border: 1.8px solid #fff;
+		  opacity: .8;
 		  border-radius: 14%;
 		  margin-right: 12px;
 		}
@@ -200,7 +205,6 @@
 		.fillers-check:after {
 	  	display: none;
 			content: url(../image/catalog/checkbox-on.svg);
-			
 			position: absolute;
 			left: -0.5px;
 			top: 0px;	  	
@@ -211,14 +215,8 @@
 		}
 
 		input:hover+.fatness-check {
-			border-color: #fff;
+			opacity: 1;
 		}
-
-		input:hover+.fatness-check:after {
-			background: #fff;
-		}
-
-
 
 
 		input:checked+.fillers-check {
@@ -230,12 +228,8 @@
 		}
 
 		input:hover+.fillers-check {
-			border-color: #fff;
+			opacity: 1;
 		}
-
-		/* input:hover+.fillers-check:after {
-			background: #fff;
-		} */
 
 
 		span {
@@ -282,21 +276,6 @@
 }
 
 
-.goods {
-	&__items {}
-	&__item {}
-	&__ice {}
-	&__cost {}
-	&__name {}
-	&__button {}
-}
-.line-1 {
-}
-.line-2 {
-}
-.line-3 {
-}
-
 .page-slider {
 	display: flex;
 	justify-content: flex-end;
@@ -322,7 +301,7 @@
 		margin-right: 4px;
 
 
-		&:active, {
+		&:active {
 			border-radius: 50%;
 			background: #FFF;
 
@@ -334,11 +313,15 @@
 			background: rgba(255, 255, 255, 0.2);
 		}
 
-		&:nth-child(1) {
+		&:first-child {
 			border-radius: 50%;
 			background: #FFF;
 
 			color: #323232;
+		}
+
+		&:last-child {
+			margin-right: 0;
 		}
 	}
 }
