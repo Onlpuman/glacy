@@ -569,10 +569,9 @@ main {
   border: 2px solid #FFFFFF;
   border-radius: 50%;
   background-color: transparent;
-  margin-right: 5px;
 }
-.performance__bullet:last-child {
-  margin-right: 0;
+.performance__bullet:not(:last-child) {
+  margin-right: 5px;
 }
 .performance .current {
   background: #FFF;
