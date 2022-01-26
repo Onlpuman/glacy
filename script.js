@@ -36,38 +36,62 @@ createButtonDropdown(navBasket, navBasketForm);
 function createButtonDropdown(activeButton, activeMenu) {
     let timeoutId;
 
-    activeButton.addEventListener('mouseenter', () => { /* 1_Наводим мышь на кнопку */
-                
-        buttons.forEach(removeActive);                      /* 1--Убираем подложку у ВСЕХ КНОПОК*/
+    if (activeButton.classList.contains('js-noform')) {
+        activeButton.addEventListener('mouseenter', () => { /* 1_Наводим мышь на кнопку */
+                    
+            buttons.forEach(removeActive);                      /* 1--Убираем подложку у ВСЕХ КНОПОК*/
 
-        function removeActive(button) {                     /* */
-            button.classList.remove('active');              /* */
-        }
+            function removeActive(button) {                     /* */
+                button.classList.remove('active');              /* */
+            }
 
-        forms.forEach(form => form.style.display = 'none'); /* 1--Убираем видимость ВСЕХ ФОРМ*/
+            forms.forEach(form => form.style.display = 'none'); /* 1--Убираем видимость ВСЕХ ФОРМ*/
 
-        clearTimeout(timeoutId);                            /*Обнуляем таймер*/
-        activeButton.classList.add('active');               /* 1--Включаем подложку КНОПКИ*/
-        activeMenu.style.display = 'flex';                  /* 1--Включаем видимость ФОРМЫ*/
-    })
+            clearTimeout(timeoutId);                            /*Обнуляем таймер*/
+            activeButton.classList.add('active');               /* 1--Включаем подложку КНОПКИ*/
+        })
 
-    activeButton.addEventListener('mouseleave', () => { /* 2--Уводим мышь с кнопки*/
-        timeoutId = setTimeout(() => {                    /* 2--Ставим таймер*/
-            activeMenu.style.display = 'none';               /* 2--Убираем видимость ФОРМЫ*/  
-            activeButton.classList.remove('active');         /* 2--Убираем подложку КНОПКИ*/
-        }, 500);
-    })
+        activeButton.addEventListener('mouseleave', () => { /* 2--Уводим мышь с кнопки*/
+            timeoutId = setTimeout(() => {                    /* 2--Ставим таймер*/ 
+                activeButton.classList.remove('active');         /* 2--Убираем подложку КНОПКИ*/
+            }, 500);
+        })
 
-    activeMenu.addEventListener('mouseenter', () => {   /* 3--Наводим мышь на форму*/
-        clearTimeout(timeoutId);                          /* 3--Обнуляем таймер*/
-    })
+    } else {
 
-    activeMenu.addEventListener('mouseleave', () => {   /* 4--Уводим мышь с формы*/
-        timeoutId = setTimeout(() => {                    /* 4--Ставим таймер*/
-            activeMenu.style.display = 'none';              /* 4--Убираем видимость ФОРМЫ*/
-            activeButton.classList.remove('active');        /* 4--Убираем подложку КНОПКИ*/
-        }, 500);
-    })
+        activeButton.addEventListener('mouseenter', () => { /* 1_Наводим мышь на кнопку */
+                    
+            buttons.forEach(removeActive);                      /* 1--Убираем подложку у ВСЕХ КНОПОК*/
+
+            function removeActive(button) {                     /* */
+                button.classList.remove('active');              /* */
+            }
+
+            forms.forEach(form => form.style.display = 'none'); /* 1--Убираем видимость ВСЕХ ФОРМ*/
+
+            clearTimeout(timeoutId);                            /*Обнуляем таймер*/
+            activeButton.classList.add('active');               /* 1--Включаем подложку КНОПКИ*/
+            activeMenu.style.display = 'flex';                  /* 1--Включаем видимость ФОРМЫ*/
+        })
+
+        activeButton.addEventListener('mouseleave', () => { /* 2--Уводим мышь с кнопки*/
+            timeoutId = setTimeout(() => {                    /* 2--Ставим таймер*/
+                activeMenu.style.display = 'none';               /* 2--Убираем видимость ФОРМЫ*/  
+                activeButton.classList.remove('active');         /* 2--Убираем подложку КНОПКИ*/
+            }, 500);
+        })
+
+        activeMenu.addEventListener('mouseenter', () => {   /* 3--Наводим мышь на форму*/
+            clearTimeout(timeoutId);                          /* 3--Обнуляем таймер*/
+        })
+
+        activeMenu.addEventListener('mouseleave', () => {   /* 4--Уводим мышь с формы*/
+            timeoutId = setTimeout(() => {                    /* 4--Ставим таймер*/
+                activeMenu.style.display = 'none';              /* 4--Убираем видимость ФОРМЫ*/
+                activeButton.classList.remove('active');        /* 4--Убираем подложку КНОПКИ*/
+            }, 500);
+        })
+    }
 }
 
 // feedback
@@ -77,6 +101,7 @@ const navFeedback = document.querySelector('.nav__feedback-container');
 navEntryLink.addEventListener("click", () => {
     navFeedback.style.display = 'block';
 })
+
 
 
 // Слайдер bullets //
