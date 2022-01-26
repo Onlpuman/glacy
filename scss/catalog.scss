@@ -299,7 +299,9 @@
 
 		color: #FFF;
 
-		margin-right: 4px;
+		&:not(:last-child) {
+  		margin-right: 4px;
+		}
 
 
 		&:active {
@@ -319,10 +321,6 @@
 			background: #FFF;
 
 			color: #323232;
-		}
-
-		&:last-child {
-			margin-right: 0;
 		}
 	}
 }

@@ -57,10 +57,8 @@
 		border-radius: 50%;
 		background-color: transparent;
 
-		margin-right: 5px;
-
-		&:last-child {
-			margin-right: 0;
+		&:not(:last-child) {
+			margin-right: 5px;
 		}
 	}
 
