@@ -181,7 +181,7 @@
 		  margin-right: 11px;
 		}
 
-		.fatness-check:after {
+		.fatness-check::after {
 	  	display: none;
 			content: '';
 			position: absolute;
@@ -203,7 +203,7 @@
 		  margin-right: 12px;
 		}
 
-		.fillers-check:after {
+		.fillers-check::after {
 	  	display: none;
 			content: url(../image/catalog/checkbox-on.svg);
 			position: absolute;
@@ -211,7 +211,7 @@
 			top: 0px;	  	
 		}
 
-		input:checked+.fatness-check:after {
+		input:checked+.fatness-check::after {
 			display: block;
 		}
 
@@ -224,7 +224,7 @@
 			border: none;
 		}
 
-		input:checked+.fillers-check:after {
+		input:checked+.fillers-check::after {
 			display: block;
 		}
 

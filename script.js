@@ -1,22 +1,7 @@
 // Отображение форм в nav
-
 // Search
 const navSearch = document.querySelector('.nav__search');
-const navSearchForm = document.querySelector('.nav__search-form');
-
-/*let timeoutId;
-
-navSearch.addEventListener("mouseenter", () => {
-    clearTimeout(timeoutId);
-    navSearchForm.style.display = 'flex';
-})
-
-navSearch.addEventListener("mouseleave", () => {
-    timeoutId = setTimeout(() => {
-        navSearchForm.style.display = 'none';
-    }, 500)
-})*/
-
+const navSearchForm = document.querySelector('.nav__search-form')
 
 //entrance
 const navEntry = document.querySelector('.nav__entry');
@@ -28,6 +13,48 @@ const navBasketForm = document.querySelector('.nav__basket-container');
 
 const buttons = document.querySelectorAll('.js-nav-item');
 const forms = document.querySelectorAll('.js-nav-dropdown');
+
+const navMenuLinks = document.querySelectorAll('.menu__link');
+const navMenuLink = document.querySelector('.menu__link');
+const navMenuForm = document.querySelector('.menu__submenu');
+
+
+createMenuDropdown(navMenuLink, navMenuForm)
+
+function createMenuDropdown(activeLink, activeForm) {
+    let timeoutId;
+
+    activeLink.addEventListener('mouseenter', () => { /* 1_Наводим мышь на кнопку */
+                
+        buttons.forEach(removeActive);                      /* 1--Убираем подложку у ВСЕХ КНОПОК*/
+
+        function removeActive(button) {                             /* */
+            button.classList.remove('link-js-active');              /* */
+        }
+
+        clearTimeout(timeoutId);                            /*Обнуляем таймер*/
+        activeLink.classList.add('link-js-active');          /* 1--Включаем подложку КНОПКИ*/
+        activeForm.style.display = 'block';                  /* 1--Включаем видимость ФОРМЫ SUBMENU*/
+    })
+
+    activeLink.addEventListener('mouseleave', () => {       /* 2--Уводим мышь с кнопки*/
+        timeoutId = setTimeout(() => {                      /* 2--Ставим таймер*/
+            activeForm.style.display = 'none';              /* 2--Убираем видимость ФОРМЫ */  
+            activeLink.classList.remove('link-js-active');  /* 2--Убираем подложку КНОПКИ*/
+        }, 200);
+    })
+
+    activeForm.addEventListener('mouseenter', () => {       /* 3--Наводим мышь на форму*/
+        clearTimeout(timeoutId);                            /* 3--Обнуляем таймер*/
+    })
+
+    activeForm.addEventListener('mouseleave', () => {       /* 4--Уводим мышь с формы*/
+        timeoutId = setTimeout(() => {                      /* 4--Ставим таймер*/
+            activeForm.style.display = 'none';              /* 4--Убираем видимость ФОРМЫ*/
+            activeLink.classList.remove('link-js-active');  /* 4--Убираем подложку КНОПКИ*/
+        }, 200);
+    }) 
+}
 
 createButtonDropdown(navSearch, navSearchForm);
 createButtonDropdown(navEntry, navEntryForm);
@@ -54,7 +81,7 @@ function createButtonDropdown(activeButton, activeMenu) {
         activeButton.addEventListener('mouseleave', () => { /* 2--Уводим мышь с кнопки*/
             timeoutId = setTimeout(() => {                    /* 2--Ставим таймер*/ 
                 activeButton.classList.remove('active');         /* 2--Убираем подложку КНОПКИ*/
-            }, 500);
+            }, 100);
         })
 
     } else {
@@ -78,7 +105,7 @@ function createButtonDropdown(activeButton, activeMenu) {
             timeoutId = setTimeout(() => {                    /* 2--Ставим таймер*/
                 activeMenu.style.display = 'none';               /* 2--Убираем видимость ФОРМЫ*/  
                 activeButton.classList.remove('active');         /* 2--Убираем подложку КНОПКИ*/
-            }, 500);
+            }, 100);
         })
 
         activeMenu.addEventListener('mouseenter', () => {   /* 3--Наводим мышь на форму*/
@@ -89,18 +116,21 @@ function createButtonDropdown(activeButton, activeMenu) {
             timeoutId = setTimeout(() => {                    /* 4--Ставим таймер*/
                 activeMenu.style.display = 'none';              /* 4--Убираем видимость ФОРМЫ*/
                 activeButton.classList.remove('active');        /* 4--Убираем подложку КНОПКИ*/
-            }, 500);
+            }, 100);
         })
     }
 }
 
-// feedback
+// Отображение feedback в Каталоге
 const navEntryLink = document.querySelector('.js-nav_entry-link');
 const navFeedback = document.querySelector('.nav__feedback-container');
+
 
 navEntryLink.addEventListener("click", () => {
     navFeedback.style.display = 'block';
 })
+
+
 
 
 

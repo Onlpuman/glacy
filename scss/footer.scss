@@ -62,7 +62,7 @@
 		&:first-child {
 			font-weight: bold;
 			
-			&:before {
+			&::before {
 
 				content: '';
 				display: block;
@@ -95,7 +95,7 @@
 	}
 
 	&__logo {
-
+		
 	}
 
 	&__author {

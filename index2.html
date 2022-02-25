@@ -10,112 +10,114 @@
 <body class="site__bg-catalog">
     <header class="container">
             <nav class="nav">
-                <div class="nav__flex">
-                    <div class="nav__flex-1"> 
+                <div class="nav__container">
+                    <div class="nav__work"> 
                         <a class="nav__logo" href="index.html">
-                            <img src="image/main/header/logo.svg" alt="логотип glacyshop" width="154" height="64">
+                            <img src="image/main/header/logo.svg" alt="Логотип Glacyshop" width="154" height="64">
                         </a>
                         <div class="menu">
                             <div class="menu__catalog">
-                                <a href="#" class="link link-catalog">Каталог</a>
+                                <a class="menu__link link-catalog js-nav-item" href="#">Каталог</a>
                                 <div class="menu__submenu">
-                                    <a href="#" class="link__submenu">Новинки</a>
-                                    <a href="#" class="link__submenu link__submenu-active">Сливочное</a>
-                                    <a href="#" class="link__submenu">Щербеты</a>
-                                    <a href="#" class="link__submenu">Фруктовый лед</a>
-                                    <a href="#" class="link__submenu">Мелорин</a>
+                                    <a class="link__submenu" href="#">Новинки</a>
+                                    <a class="link__submenu link__submenu-active" href="#">Сливочное</a>
+                                    <a class="link__submenu" href="#">Щербеты</a>
+                                    <a class="link__submenu" href="#">Фруктовый лед</a>
+                                    <a class="link__submenu" href="#">Мелорин</a>
                                 </div>
                             </div>
-                            <a href="#" class="link">Доставка и оплата</a>
-                            <a href="#" class="link">О компании</a>
+                            <a class="menu__link js-nav-item" href="#">Доставка и оплата</a>
+                            <a class="menu__link js-nav-item" href="#">О компании</a>
                         </div>
                     </div>
-                    <div class="nav__flex-2">
-                        <div class="nav__entrance">
+                    
+                    <div class="nav__entrance">
 
-                            <div class="nav__search item js-nav-item">
-                                <a href='#'>
-                                  <svg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                                    <path class="nav__svg" d='M16 14.665l-4.921-4.932a6.144 6.144 0 00-.994-8.273 6.113 6.113 0 00-8.307.352 6.141 6.141 0 00-.293 8.328 6.11 6.11 0 008.262.937L14.659 16 16 14.665zm-9.918-4.288a4.245 4.245 0 01-3.928-2.63 4.269 4.269 0 01.922-4.643 4.248 4.248 0 014.632-.923 4.253 4.253 0 012.624 3.936 4.274 4.274 0 01-1.247 3.01 4.256 4.256 0 01-3.003 1.25z' fill='#fff'/>
-                                  </svg>
-                                </a>
-                                <form class="nav__search-form js-nav-dropdown" action="#" method="get">
-                                    <input class="nav__search-input input" type="text" name="post" placeholder="Крем-брюле">
-                                </form>
-                            </div>
+                        <div class="nav__search item js-nav-item">
+                            <a href='#'>
+                              <svg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                                <path class="nav__svg" d='M16 14.665l-4.921-4.932a6.144 6.144 0 00-.994-8.273 6.113 6.113 0 00-8.307.352 6.141 6.141 0 00-.293 8.328 6.11 6.11 0 008.262.937L14.659 16 16 14.665zm-9.918-4.288a4.245 4.245 0 01-3.928-2.63 4.269 4.269 0 01.922-4.643 4.248 4.248 0 014.632-.923 4.253 4.253 0 012.624 3.936 4.274 4.274 0 01-1.247 3.01 4.256 4.256 0 01-3.003 1.25z' fill='#fff'/>
+                              </svg>
+                            </a>
+                        </div>
+                        <form class="nav__search-form nav__search-form--move js-nav-dropdown" action="#" method="get">
+                            <input class="nav__search-input input" type="text" name="post" placeholder="Крем-брюле">
+                        </form>
 
 
-                            <div class="nav__entry item js-nav-item">
-                                <a class="nav__link" href="#">
-                                    <svg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'> 
-                                        <path class="nav__svg" d='M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z' fill='white'/><path class="nav__svg" d='M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z' fill='white'/>
-                                    </svg>
-                                    <span>Вход</span>
-                                </a>
-                                <form class="nav__entry-form js-nav-dropdown" action="#" method="get">
-                                    <input class="nav__entry-input input" type="text" name="post" placeholder="email@example.com">
-                                    <input class="nav__entry-input input" type="text" name="post" placeholder="......">
-                                    <div class="nav__entry-flex">
-                                        <button class="nav__entry-button button" type="submit">Войти</button>
-                                        <div class="nav__entry-links">
-                                            <a class="nav__entry-link" href="#">Забыли пароль?</a>
-                                            <span class="nav__entry-link js-nav_entry-link" href="#">Новая регистрация</span>
-                                        </div>
-                                    </div>  
-                                </form>
-                            </div>
-                           
-                            <div class="nav__basket nav__basket-catalog item item-catalog js-nav-item">
-                                <a class="nav__link" href="#">
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" fill="#343434"/>
-                                        <path d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" fill="#343434"/>
-                                        <path d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z" fill="#343434"/>
-                                        <path d="M5.93506 4.03003L6.97297 13H17.5032L18.6923 4.03003H5.93506Z" fill="#E84D37"/>
-                                    </svg>
-                                    <span>2 товара</span>
-                                </a>
-                                <div class="nav__basket-container js-nav-dropdown">
-                                    <form class="nav__basket-form" action="#" method="get">
-                                        <div class="nav__basket-item">
-                                            <object type="image/svg+xml" data="image/main/header/basket_form/X.svg"></object>
-                                            <img src="image/main/header/basket_form/orange.png" alt="апельсиновое мороженое" width="33" height="33">
-                                            <p>Пломбир с апельсиновым джемом</p>
-                                            <p> 1,5 кг х <span>200 руб.</span></p>
-                                            <p>300 руб.</p>
-                                        </div>
-                                        <div class="nav__basket-item">
-                                            <object type="image/svg+xml" data="image/main/header/basket_form/X.svg"></object>
-                                            <img src="image/main/header/basket_form/strawb.png" alt="клубничное мороженое" width="33" height="33">
-                                            <p><br>Клубничный пломбир с присыпкой<br>из белого шоколада</p>
-                                            <p> 1,5 кг х <span>300 руб.</span></p>
-                                            <p>450 руб.</p>
-                                        </div>
-                                        <div class="nav__basket-flex">
-                                            <div class="nav__basket-price">
-                                                <p>Итого:</p>
-                                                <p>&nbsp;750 руб.</p>
-                                            </div>
-                                            <button class="nav__basket-button button" type="submit">Оформить заказ</button>
-                                        </div>  
-                                    </form>
+                        <div class="nav__entry item js-nav-item">
+                            <a class="nav__link" href="#">
+                                <svg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'> 
+                                    <path class="nav__svg" d='M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z' fill='white'/><path class="nav__svg" d='M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z' fill='white'/>
+                                </svg>
+                                <span>Вход</span>
+                            </a>
+                        </div>
+                       <form class="nav__entry-form nav__entry-form--move js-nav-dropdown" action="#" method="get">
+                            <input class="nav__entry-input input" type="text" name="post" placeholder="email@example.com">
+                            <input class="nav__entry-input input" type="text" name="post" placeholder="......">
+                            <div class="nav__entry-flex">
+                                <button class="nav__entry-button button" type="submit">Войти</button>
+                                <div class="nav__entry-links">
+                                    <a class="nav__entry-link" href="#">Забыли пароль?</a>
+                                    <span class="nav__entry-link js-nav_entry-link" href="#">Новая регистрация</span>
                                 </div>
-                            </div>
+                            </div>  
+                        </form>
 
-                            <div class="nav__feedback-container">
-                                <form class="nav__feedback" action="#" method="get">
-                                    <h2 class="nav__feedback-heading">Мы обязательно вам ответим!</h2>
-                                    <input class="nav__feedback-input input" type="text" name="post" placeholder="Имя Фамилия">
-                                    <input class="nav__feedback-input input" type="text" name="post" placeholder="email@example.com">
-                                    <textarea class="nav__feedback-textarea input" type="text" name="post" placeholder="В свободной форме"></textarea>
-                                    <div class="nav__feedback-flex">
-                                        <button class="nav__feedback-button button" type="submit">Отправить</button>  
-                                    </div> 
-                                </form>
-                            </div>
 
+                        <div class="nav__basket nav__basket-catalog item item-catalog js-nav-item">
+                            <a class="nav__link" href="#">
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" fill="#343434"/>
+                                    <path d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" fill="#343434"/>
+                                    <path d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z" fill="#343434"/>
+                                    <path d="M5.93506 4.03003L6.97297 13H17.5032L18.6923 4.03003H5.93506Z" fill="#E84D37"/>
+                                </svg>
+                                <span>2 товара</span>
+                            </a>
                         </div>
+                        <div class="nav__basket-container js-nav-dropdown">
+                            <form class="nav__basket-form" action="#" method="get">
+                                <div class="nav__basket-item">
+                                    <object type="image/svg+xml" data="image/main/header/basket_form/X.svg"></object>
+                                    <img src="image/main/header/basket_form/orange.png" alt="апельсиновое мороженое" width="33" height="33">
+                                    <p>Пломбир с апельсиновым джемом</p>
+                                    <p> 1,5 кг х <span>200 руб.</span></p>
+                                    <p>300 руб.</p>
+                                </div>
+                                <div class="nav__basket-item">
+                                    <object type="image/svg+xml" data="image/main/header/basket_form/X.svg"></object>
+                                    <img src="image/main/header/basket_form/strawb.png" alt="клубничное мороженое" width="33" height="33">
+                                    <p><br>Клубничный пломбир с присыпкой<br>из белого шоколада</p>
+                                    <p> 1,5 кг х <span>300 руб.</span></p>
+                                    <p>450 руб.</p>
+                                </div>
+                                <div class="nav__basket-flex">
+                                    <div class="nav__basket-price">
+                                        <p>Итого:</p>
+                                        <p>&nbsp;750 руб.</p>
+                                    </div>
+                                    <button class="nav__basket-button button" type="submit">Оформить заказ</button>
+                                </div>  
+                            </form>
+                        </div>
+
+
+                        <div class="nav__feedback-container">
+                            <form class="nav__feedback" action="#" method="get">
+                                <h2 class="nav__feedback-heading">Мы обязательно вам ответим!</h2>
+                                <input class="nav__feedback-input input" type="text" name="post" placeholder="Имя Фамилия">
+                                <input class="nav__feedback-input input" type="text" name="post" placeholder="email@example.com">
+                                <textarea class="nav__feedback-textarea input" type="text" name="post" placeholder="В свободной форме"></textarea>
+                                <div class="nav__feedback-flex">
+                                    <button class="nav__feedback-button button" type="submit">Отправить</button>  
+                                </div> 
+                            </form>
+                        </div>
+
                     </div>
+                    
                 </div>
                 <div class="nav__contacts">
                     <div class="item-time">с 10 до 20, ежедневно</div>
@@ -210,7 +212,7 @@
 
                         </div>
                     </div>
-                    <button type="submit" class="filter__button">Применить</button>
+                    <button type="submit" class="filter__button" type="submit">Применить</button>
                 </form>
             </section>
         </section>
@@ -218,113 +220,113 @@
             <div class="goods__items visible-1">
                 <div class="goods__item">
                     <div class="goods__ice">
-                        <img src="image/main/main/goods/ice_1.png" alt="ice-cream">
+                        <img src="image/main/main/goods/ice_1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                         <p class="goods__cost">310 ₽<span>/кг</span></p>
                     </div>
-                    <a href="#" class="goods__name"><span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
-                    <a href class="goods__button button">Быстрый просмотр</a>
+                    <a class="goods__name" href="#"><span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
+                    <a class="goods__button button" href="#">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
                     <div class="goods__ice">
-                        <img src="image/main/main/goods/ice_2.png" alt="ice-cream">
+                        <img src="image/main/main/goods/ice_2.png" alt="Сливочно-кофейное с кусочками шоколада">
                         <p class="goods__cost">380 ₽<span>/кг</span></p>
                     </div>
-                    <a href="#" class="goods__name"><span>Сливочно-кофейное с кусочками шоколада</span></a>
-                    <a href class="goods__button button">Быстрый просмотр</a>
+                    <a class="goods__name" href="#"><span>Сливочно-кофейное с кусочками шоколада</span></a>
+                    <a class="goods__button button" href="#">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
                     <div class="goods__ice">
-                        <img src="image/main/main/goods/ice_3.png" alt="ice-cream">
+                        <img src="image/main/main/goods/ice_3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                         <p class="goods__cost">355 ₽<span>/кг</span></p>
                     </div>
-                    <a href="#" class="goods__name"><span>Сливочно-клубничное с присыпкой из белого шоколада</span></a>
-                    <a href class="goods__button button">Быстрый просмотр</a>
+                    <a class="goods__name" href="#"><span>Сливочно-клубничное с присыпкой из белого шоколада</span></a>
+                    <a class="goods__button button" href="#">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
                     <div class="goods__ice">
-                        <img src="image/main/main/goods/ice_4.png" alt="ice-cream">
+                        <img src="image/main/main/goods/ice_4.png" alt="Сливочное крем-брюле с карамельной подливкой">
                         <p class="goods__cost">415 ₽<span>/кг</span></p>
                     </div>
-                    <a href="#" class="goods__name"><span>Сливочное крем-брюле с карамельной подливкой</span></a>
-                    <a href class="goods__button button">Быстрый просмотр</a>
+                    <a class="goods__name" href="#"><span>Сливочное крем-брюле с карамельной подливкой</span></a>
+                    <a class="goods__button button" href="#">Быстрый просмотр</a>
                 </div>
             </div>
             <div class="goods__items visible-2">
                 <div class="goods__item">
                     <div class="goods__ice">
-                        <img src="image/main/main/goods/ice_5.png" alt="ice-cream">
+                        <img src="image/main/main/goods/ice_5.png" alt="Сливочное с брусничным джемом">
                         <p class="goods__cost">325 ₽<span>/кг</span></p>
                     </div>
-                    <a href="#" class="goods__name"><span>Сливочное с брусничным<br>джемом</span></a>
-                    <a href class="goods__button button">Быстрый просмотр</a>
+                    <a class="goods__name" href="#"><span>Сливочное с брусничным<br>джемом</span></a>
+                    <a class="goods__button button" href="#">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
                     <div class="goods__ice">
-                        <img src="image/main/main/goods/ice_6.png" alt="ice-cream">
+                        <img src="image/main/main/goods/ice_6.png" alt="Сливочно-черничное с цельными ягодами черники">
                         <p class="goods__cost">410 ₽<span>/кг</span></p>
                     </div>
-                    <a href="#" class="goods__name"><span>Сливочно-черничное с цельными ягодами черники</span></a>
-                    <a href class="goods__button button">Быстрый просмотр</a>
+                    <a class="goods__name" href="#"><span>Сливочно-черничное с цельными ягодами черники</span></a>
+                    <a class="goods__button button" href="#">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
                     <div class="goods__ice">
-                        <img src="image/main/main/goods/ice_7.png" alt="ice-cream">
+                        <img src="image/main/main/goods/ice_7.png" alt="Сливочно-лимонное с карамельной присыпкой">
                         <p class="goods__cost">315 ₽<span>/кг</span></p>
                     </div>
-                    <a href="#" class="goods__name"><span>Сливочно-лимонное с карамельной присыпкой</span></a>
-                    <a href class="goods__button button">Быстрый просмотр</a>
+                    <a class="goods__name" href="#"><span>Сливочно-лимонное с карамельной присыпкой</span></a>
+                    <a class="goods__button button" href="#">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
                     <div class="goods__ice">
-                        <img src="image/main/main/goods/ice_8.png" alt="ice-cream">
+                        <img src="image/main/main/goods/ice_8.png" alt="Сливочное с шоколадной стружкой">
                         <p class="goods__cost">320 ₽<span>/кг</span></p>
                     </div>
-                    <a href="#" class="goods__name"><span>Сливочное с шоколадной стружкой</span></a>
-                    <a href class="goods__button button">Быстрый просмотр</a>
+                    <a class="goods__name" href="#"><span>Сливочное с шоколадной стружкой</span></a>
+                    <a class="goods__button button" href="#">Быстрый просмотр</a>
                 </div>
             </div>                
             <div class="goods__items visible-3">
                 <div class="goods__item">
                     <div class="goods__ice">
-                        <img src="image/main/main/goods/ice_9.png" alt="ice-cream">
+                        <img src="image/main/main/goods/ice_9.png" alt="Сливочно-ванильное с кусочками шоколада">
                         <p class="goods__cost">440 ₽<span>/кг</span></p>
                     </div>
-                    <a href="#" class="goods__name"><span>Сливочно-ванильное<br>с кусочками шоколада</span></a>
-                    <a href class="goods__button button">Быстрый просмотр</a>
+                    <a class="goods__name" href="#"><span>Сливочно-ванильное<br>с кусочками шоколада</span></a>
+                    <a class="goods__button button" href="#">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
                     <div class="goods__ice">
-                        <img src="image/main/main/goods/ice_10.png" alt="ice-cream">
+                        <img src="image/main/main/goods/ice_10.png" alt="Сливочноe с ментоловым сиропом">
                         <p class="goods__cost">435 ₽<span>/кг</span></p>
                     </div>
-                    <a href="#" class="goods__name"><span>Сливочноe с ментоловым<br>сиропом</span></a>
-                    <a href class="goods__button button">Быстрый просмотр</a>
+                    <a class="goods__name" href="#"><span>Сливочноe с ментоловым<br>сиропом</span></a>
+                    <a class="goods__button button" href="#">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
                     <div class="goods__ice">
-                        <img src="image/main/main/goods/ice_11.png" alt="ice-cream">
+                        <img src="image/main/main/goods/ice_11.png" alt="Сливочное с кусочками черного шоколада">
                         <p class="goods__cost">355 ₽<span>/кг</span></p>
                     </div>
-                    <a href="#" class="goods__name"><span>Сливочное с кусочками черного шоколада</span></a>
-                    <a href class="goods__button button">Быстрый просмотр</a>
+                    <a class="goods__name" href="#"><span>Сливочное с кусочками черного шоколада</span></a>
+                    <a class="goods__button button" href="#">Быстрый просмотр</a>
                 </div>
                 <div class="goods__item">
                     <div class="goods__ice">
-                        <img src="image/main/main/goods/ice_12.png" alt="ice-cream">
+                        <img src="image/main/main/goods/ice_12.png" alt="Сливочное с мятным сиропом">
                         <p class="goods__cost">420 ₽<span>/кг</span></p>
                     </div>
-                    <a href="#" class="goods__name"><span>Сливочное с мятным сиропом</span></a>
-                    <a href class="goods__button button">Быстрый просмотр</a>
+                    <a class="goods__name" href="#"><span>Сливочное с мятным сиропом</span></a>
+                    <a class="goods__button button" href="#">Быстрый просмотр</a>
                 </div>
             </div>
         </section>
         <div class="page-slider">
-            <a href="#" class="page-slider__item">1</a>
-            <a href="#" class="page-slider__item">2</a>
-            <a href="#" class="page-slider__item">3</a>
-            <a href="#" class="page-slider__item">4</a>
-            <a href="#" class="page-slider__item">5</a>
-            <a href="#" class="page-slider__item">
+            <a class="page-slider__item" href="#">1</a>
+            <a class="page-slider__item" href="#">2</a>
+            <a class="page-slider__item" href="#">3</a>
+            <a class="page-slider__item" href="#">4</a>
+            <a class="page-slider__item" href="#">5</a>
+            <a class="page-slider__item" href="#">
                 <img src="image/catalog/icon-right.svg" alt="Переход на следующую страницу">
             </a>
         </div>

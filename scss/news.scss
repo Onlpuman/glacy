@@ -34,7 +34,7 @@
 			// здесь был маржин, теперь это паддинг у карточки
 		}
 
-		.news__text {
+		.news__link {
 			display: inline-block;
 			font-weight: bold;
 			font-size: 24px;
@@ -72,7 +72,7 @@
 			background-clip: padding-box; // это правило отступает бордером "внутрь"
 
 			// это и есть цветной "бордер" на ксс, а на самом деле полосатый фон - подложка
-			&:before {
+			&::before {
 				content: '';
 				position: absolute; // абсолюто позиционируем
 

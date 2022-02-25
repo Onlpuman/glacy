@@ -150,21 +150,16 @@ main {
   /* _______________________________*/
   /* Basket */
   /* _______________________________*/
-  /* feedback */
+  /* feedback на странице каталога */
 }
-.nav__flex {
+.nav__container {
   display: flex;
   justify-content: space-between;
-}
-.nav__flex-1 {
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
-.nav__flex-2 {
+.nav__work {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 .nav__logo {
   margin-right: 11px;
@@ -184,13 +179,14 @@ main {
   cursor: pointer;
   height: 32px;
 }
-.nav .item.active, .nav .item:hover {
+.nav .item.active {
   background: #F8F7F4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.nav .item.active span, .nav .item:hover span {
+.nav .item.active span {
   color: #000;
 }
-.nav .item.active .nav__svg, .nav .item:hover .nav__svg {
+.nav .item.active .nav__svg {
   fill: #000;
 }
 .nav .item-catalog {
@@ -225,32 +221,6 @@ main {
 .nav__basket-catalog {
   width: 118px;
 }
-.nav__basket-container {
-  display: none;
-  position: relative;
-  position: absolute;
-  top: 36px;
-  right: 0px;
-  width: 539px;
-  height: 242px;
-  background: #F8F7F4;
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
-  border-radius: 4px;
-  z-index: 1;
-}
-.nav__feedback-container {
-  display: none;
-  position: fixed;
-  top: 330px;
-  right: calc(50% - 239px);
-  width: 478px;
-  height: 441px;
-  background: #F8F7F4;
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
-  border-radius: 4px;
-  z-index: 3;
-  padding: 23px;
-}
 .nav .input {
   background: #FFF;
   border: 1px solid #D3D3D2;
@@ -280,6 +250,9 @@ main {
 .nav__search-input {
   width: 311px;
   height: 44px;
+}
+.nav__search-form--move {
+  right: 230px;
 }
 .nav__entry-form {
   position: absolute;
@@ -324,6 +297,22 @@ main {
   line-height: 16px;
   padding: 14px 26px;
 }
+.nav__entry-form--move {
+  right: 126px;
+}
+.nav__basket-container {
+  display: none;
+  position: relative;
+  position: absolute;
+  top: 36px;
+  right: 0px;
+  width: 539px;
+  height: 242px;
+  background: #F8F7F4;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  z-index: 1;
+}
 .nav__basket-form {
   width: 100%;
   height: 100%;
@@ -363,7 +352,7 @@ main {
   padding-right: 14px;
   /* Разделитель */
 }
-.nav__basket-flex:after {
+.nav__basket-flex::after {
   position: absolute;
   top: 130px;
   left: 14px;
@@ -408,6 +397,19 @@ main {
   line-height: 24px;
   color: #FFFFFF;
 }
+.nav__feedback-container {
+  display: none;
+  position: fixed;
+  top: 330px;
+  right: calc(50% - 239px);
+  width: 478px;
+  height: 441px;
+  background: #F8F7F4;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  z-index: 3;
+  padding: 23px;
+}
 .nav__feedback {
   display: flex;
   flex-direction: column;
@@ -425,8 +427,10 @@ main {
   margin-bottom: 20px;
 }
 .nav__feedback-textarea {
-  width: 428px;
-  height: 154px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 154px;
+  max-height: 154px;
   margin-bottom: 20px;
   padding: 15px;
 }
@@ -443,15 +447,21 @@ main {
   position: relative;
   display: flex;
   z-index: 1;
+  /* &__main:hover .menu__submenu {
+  	display: block;
+  }
+  */
+  /* &__catalog:hover .menu__submenu {
+  	display: block;
+  } */
 }
-.menu .link {
-  display: inline-block;
-  vertical-align: baseline;
+.menu__link {
+  display: block;
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
   padding: 6px 13px;
-  margin: 0 6px 8px 0;
+  margin-right: 6px;
   color: #FFFFFF;
   text-decoration: underline 1.5px solid rgba(255, 255, 255, 0.2);
 }
@@ -470,7 +480,6 @@ main {
   background: #FFFFFF;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
-  /* padding: 0 20px; */
 }
 .menu .link__submenu {
   display: flex;
@@ -488,21 +497,25 @@ main {
   margin: 6px 0 6px 0;
   /* Разделитель */
 }
-.menu .link__submenu:first-child:after {
+.menu .link__submenu:first-child::after {
   content: "";
   position: absolute;
-  top: 35px;
+  top: 30px;
   left: 7px;
   display: inline-block;
   width: 128px;
   height: 1px;
   background-color: rgba(50, 50, 50, 0.2);
 }
+.menu .link__submenu:first-child:hover::after {
+  display: none;
+}
 .menu .link__submenu:last-child {
   margin-bottom: 6px;
 }
 .menu .link__submenu:hover {
   background-color: #FBDED7;
+  border-radius: 4px;
 }
 .menu .link__submenu:active {
   background-color: #F6B5A5;
@@ -514,16 +527,10 @@ main {
 .menu .link__submenu-active:hover, .menu .link__submenu-active:active {
   background-color: #D07058;
 }
-.menu__main:hover .link {
+.menu .link-js-active {
   color: #323232;
   background: #FFFFFF;
   border-radius: 26px;
-}
-.menu__main:hover .menu__submenu {
-  display: block;
-}
-.menu__catalog:hover .menu__submenu {
-  display: block;
 }
 
 .performance {
@@ -681,6 +688,7 @@ main {
   height: 61px;
   border-radius: 50%;
   background-color: #fff;
+  z-index: 1;
 }
 .goods__cost {
   position: absolute;
@@ -800,7 +808,7 @@ main {
   color: #323232;
   margin-bottom: 4px;
 }
-.news__card-left .news__text {
+.news__card-left .news__link {
   display: inline-block;
   font-weight: bold;
   font-size: 24px;
@@ -809,7 +817,7 @@ main {
   color: #323232;
   text-decoration: underline;
 }
-.news__card-left .news__text:hover {
+.news__card-left .news__link:hover {
   color: #E84D37;
 }
 .news__card-right {
@@ -826,7 +834,7 @@ main {
   border: 6px solid transparent;
   background-clip: padding-box;
 }
-.news__card-right .news__inner:before {
+.news__card-right .news__inner::before {
   content: "";
   position: absolute;
   top: -6px;
@@ -963,7 +971,7 @@ main {
 .footer__link:first-child {
   font-weight: bold;
 }
-.footer__link:first-child:before {
+.footer__link:first-child::before {
   content: "";
   display: block;
   background: url(../image/main/footer/heart.svg) 0 0/contain no-repeat;
@@ -982,6 +990,103 @@ main {
   line-height: 18px;
   /* or 150% */
   color: #FFFFFF;
+}
+
+.button:hover {
+  transition: transform 0.1s linear;
+  transform: scale(103%);
+}
+
+.button:not(:hover) {
+  transition: transform 0.05s linear;
+  transform: scale(100%);
+}
+
+a:hover {
+  transition: transform 0.1s linear;
+  transform: scale(105%);
+}
+
+a:not(:hover) {
+  transition: transform 0.05s linear;
+  transform: scale(100%);
+}
+
+img:hover {
+  transition: transform 0.1s linear;
+  transform: scale(102%);
+}
+
+img:not(:hover) {
+  transition: transform 0.05s linear;
+  transform: scale(100%);
+}
+
+.nav__logo:hover {
+  transform: scale(103%);
+}
+
+.item:hover {
+  transition: transform 0.1s linear;
+  transform: scale(105%);
+}
+
+.item:not(:hover) {
+  transition: transform 0.05s linear;
+  transform: scale(100%);
+}
+
+.item a:hover {
+  transition: transform 0;
+  transform: scale(100%);
+}
+
+.link {
+  transform-origin: 50% 2em;
+}
+
+.performance__bullet:hover {
+  transition: transform 0.1s linear;
+  transform: scale(110%);
+}
+
+.performance__bullet:not(:hover) {
+  transition: transform 0.05s linear;
+  transform: scale(100%);
+}
+
+.promo__card:hover {
+  transition: transform 0.1s linear;
+  transform: scale(101%);
+}
+
+.promo__card:not(:hover) {
+  transition: transform 0.05s linear;
+  transform: scale(100%);
+}
+
+.promo__card a:hover {
+  transform: scale(100%);
+}
+
+.news__link:hover {
+  transition: transform 0.1s linear;
+  transform: scale(102%);
+}
+
+.news__link:not(:hover) {
+  transition: transform 0.05s linear;
+  transform: scale(100%);
+}
+
+.footer__logo svg:hover {
+  transition: transform 0.1s linear;
+  transform: scale(105%);
+}
+
+.footer__logo svg:not(:hover) {
+  transition: transform 0.05s linear;
+  transform: scale(100%);
 }
 
 /*# sourceMappingURL=style.css.map */

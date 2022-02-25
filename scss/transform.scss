@@ -1,0 +1,97 @@
+.button:hover {
+	transition: transform 0.1s linear;
+	transform: scale(103%);
+}
+
+.button:not(:hover) {
+  transition: transform 0.05s linear;
+  transform: scale(100%);
+}
+
+a:hover{
+	transition: transform 0.1s linear;
+	transform: scale(105%);
+}
+
+a:not(:hover) {
+  transition: transform 0.05s linear;
+  transform: scale(100%);
+}
+
+img:hover {
+	transition: transform 0.1s linear;
+	transform: scale(102%);
+}
+
+img:not(:hover) {
+  transition: transform 0.05s linear;
+  transform: scale(100%);
+}
+
+.nav__logo:hover {
+	transform: scale(103%);
+}
+
+.item:hover {
+	transition: transform 0.1s linear;
+  transform: scale(105%);
+}
+
+.item:not(:hover) {
+  transition: transform 0.05s linear;
+  transform: scale(100%);
+}
+
+.item a:hover {
+	transition: transform 0;
+  transform: scale(100%);
+}
+
+.link {
+	transform-origin: 50% 2em;
+}
+
+.performance__bullet:hover {
+	transition: transform 0.1s linear;
+  transform: scale(110%);
+}
+
+.performance__bullet:not(:hover) {
+  transition: transform 0.05s linear;
+  transform: scale(100%);
+}
+
+.promo__card:hover {
+	transition: transform 0.1s linear;
+  transform: scale(101%);
+}
+
+.promo__card:not(:hover) {
+  transition: transform 0.05s linear;
+  transform: scale(100%);
+}
+
+.promo__card a:hover {
+  transform: scale(100%);
+}
+
+
+.news__link:hover {
+	transition: transform 0.1s linear;
+  transform: scale(102%);
+}
+
+.news__link:not(:hover) {
+  transition: transform 0.05s linear;
+  transform: scale(100%);
+}
+
+.footer__logo svg:hover {
+	transition: transform 0.1s linear;
+  transform: scale(105%);
+}
+
+.footer__logo svg:not(:hover) {
+  transition: transform 0.05s linear;
+  transform: scale(100%);
+}
