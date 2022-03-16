@@ -1,11 +1,6 @@
-// кнопке теперь не нужно задавать ширину в каждом месте её использования, теперь она везде одинаковая
 .button {
-	// display: flex;
-	// justify-content: center;
-	// align-items: center;
-	display: inline-block; // теперь не будет увеличиваться в высоту если окажется внутри флекс контейнера
-	/* padding: 10px 14px; */ // текст центруется за счёт падинга //Макс.Приходится применять к каждой кнопке
-	text-align: center; // и немножно родного text-align :)
+	display: inline-block;
+	text-align: center;
 
 	/* текст */
 	font-weight: bold;
@@ -28,8 +23,6 @@
 		background: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
 		box-shadow: inset 0px 2px 2px #942718;
 	}
-
-	
 }
 
 .site__bg-1 {
@@ -64,6 +57,4 @@
 main {
 	/* Прибиваю футер */
 	flex:1 1 auto;
-
-	// это ты молодец, что прибил футер :) а заодно можно было отцентовать весь main и задать ширину в одном месте
 }

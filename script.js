@@ -121,17 +121,24 @@ function createButtonDropdown(activeButton, activeMenu) {
     }
 }
 
-// Отображение feedback в Каталоге
+// Отображение feedback
 const navEntryLink = document.querySelector('.js-nav_entry-link');
-const navFeedback = document.querySelector('.nav__feedback-container');
+const navFeedback = document.querySelector('.feedback__form');
+const feedback = document.querySelector('.feedback');
+const propagation = document.querySelector('.feedback__form .feedback');
 
 
 navEntryLink.addEventListener("click", () => {
-    navFeedback.style.display = 'block';
+    navFeedback.style.display = 'flex';
 })
 
+feedback.addEventListener("click", () => {
+    navFeedback.style.display = 'none';
+})
 
-
+propagation.onclick = (event) => {
+     event.stopPropagation();
+}
 
 
 // Слайдер bullets //

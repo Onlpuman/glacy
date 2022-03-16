@@ -28,12 +28,10 @@
 	&__button {
 		font-size: 32px;
 		line-height: 44px;
-		/* identical to box height, or 137% */
 
 		color: #FFFFFF;
 
 		padding: 10px 40px;
-		
 	}
 
 	.performance__controls.hiden {
@@ -44,7 +42,6 @@
 		display: flex;
 	}
 
- 
 	&__slider {
 		position: absolute;
 		top: 164px;

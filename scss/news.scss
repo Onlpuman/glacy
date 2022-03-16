@@ -5,33 +5,27 @@
 	&__cards {
 		display: flex;
 		justify-content: space-between;
-		margin: 0 -13px; // за счёт этого маржин карточек выступает обратно
+		margin: 0 -13px;
 	}
 
 	&__card-left {
 		background: url(../image/main/main/news/strawb_bg.png) 0 0/contain no-repeat;
 
-		flex-basis: 50%; // обе карточки имеют половину ширины контейнера
-		margin: 0 13px; // это расстояние между карточками, но нам не нужно делать отступ по краям, по-этому есть отрицательный маржин у контейнера
-		
-		// width: 560px;
-		// height: 220px; // флекс культура динамичная, желательно оперировать min-height и max-height и так же с шириной, но ширину лучше с помощью flex-basis
+		flex-basis: 50%;
+		margin: 0 13px; 
 
 		min-height: 220px;
-		padding: 16px 20px; // отступ контенту лучше делать паддингом карточки чем элементами внутри
-		background-size: cover; // если текст растянет твою карточку, то фон не закроет весь блок
-		border-radius: 16px; // даже если у картинки есть скруглёные углы лучше подстраховаться бордер радиусом
+		padding: 16px 20px;
+		background-size: cover; 
+		border-radius: 16px;
 
 		.news__title {
 			font-weight: 500;
 			font-size: 16px;
 			line-height: 22px;
-			/* or 137% */	
 			color: #323232;
 
 			margin-bottom: 4px;
-
-			// здесь был маржин, теперь это паддинг у карточки
 		}
 
 		.news__link {
@@ -39,12 +33,9 @@
 			font-weight: bold;
 			font-size: 24px;
 			line-height: 30px;
-			/* or 125% */
 			color: #323232;
 
 			text-decoration: underline;
-
-			// margin-top: 4px; // отступ остался только сверху, боковой теперь у карточки / Перенес в .news__title
 
 			&:hover {
 				color: #E84D37;
@@ -53,38 +44,34 @@
 	}
 
 	&__card-right {
-		flex-basis: 50%; // обе карточки имеют половину ширины контейнера
-		margin: 0 13px; // это расстояние между карточками, но нам не нужно делать отступ по краям, по-этому есть отрицательный маржин у контейнера
+		flex-basis: 50%;
+		margin: 0 13px;
 		min-height: 220px;
 		z-index: 1;
-		// эти правила желательно вынести общее правило для карточек
-
-		// тут раньше был бордер картинкой и центовка конента, теперь бордер на ксс, но с лёгким хаком:
 
 		.news__inner {
 			background-color: rgb(248, 247, 244);
-			padding: 28px 20px; // отступ лучше делать один контейнеру чем элементам по отдельности
+			padding: 28px 20px;
 
 			// тут пошёл хак для бордера
 			position: relative;
 			border-radius: 16px;
-			border: 6px solid transparent; // тут нужен прозрачный бордер, чтобы в афтер не выступал за пределы блока
-			background-clip: padding-box; // это правило отступает бордером "внутрь"
+			border: 6px solid transparent; 
+			background-clip: padding-box;
 
 			// это и есть цветной "бордер" на ксс, а на самом деле полосатый фон - подложка
 			&::before {
 				content: '';
-				position: absolute; // абсолюто позиционируем
+				position: absolute; 
 
-				// отступаем на разрмер бордера указанного выше за пределы блока
 				top: -6px;
 				bottom: -6px;
 				left: -6px;
 				right: -6px;
 
 				background: repeating-linear-gradient(-45deg, #fff 0 7px, #8ecefb 7px 14px, #fff 14px 21px, #ff9d93 21px 28px); // это и есть цветные повторяющиеся колоски 4 штуки: белая голубая белая розовая и так по кругу
-				border-radius: 16px; // закругляем
-				z-index: -1; // без этого полоски будут поверх всего блока
+				border-radius: 16px;
+				z-index: -1;
 			}
 		}
 
@@ -96,8 +83,6 @@
 			color: #5A5A5A;
 
 			margin-bottom: 40px;
-
-			 // отступы теперь у карточки
 		}
 	}
 }
@@ -110,19 +95,18 @@
 
 	&__form {
 		display: flex;
-		// margin-top: 40px; // остальные оступы теперь у карточки / перенес в .news__text
 	}
 
 	&__input {
-		line-height: 42px; // высоту инпута лучше изменять при помощи этого правила, так вводимый текст будет отображаться по центру поля ввода. стало 42 вместо 44х т.к. сверху и снизу бордер по 1 пикселю
-		background: #fff; // короткая запись вместо #FFFFFF
+		line-height: 42px;
+		background: #fff;
 		border: 1px solid rgba(178, 178, 178, 0.52);
 		border-radius: 6px;
 
 		padding: 0 14px;
 
-		flex-grow: 1; // вместо жёстко заданной ширины инпут теперь растягивается на всё свободное пространство в блоке
-		margin-right: 10px; // и всё ещё имеет отступ 10px справа
+		flex-grow: 1;
+		margin-right: 10px;
 
 		&:hover {
 			outline: 2px solid rgba(178, 178, 178, 0.52);
@@ -131,6 +115,5 @@
 
 	&__button {
 		padding: 0 22px;
-		// кнопку переписал, подробности в файле constant.scss
 	}
 }

@@ -6,6 +6,8 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		position: relative;
+		z-index: 4;
 	}
 
 	&__work {
@@ -166,7 +168,7 @@
 		z-index: 1;
 	}
 
-	&__entry-input { /* Здесь тоже не нужна ширина? */
+	&__entry-input { 
 		width: 241px;
 		height: 44px;
 	}
@@ -335,75 +337,7 @@
 			color: #FFFFFF;
 		}
 	}
-
-	/* _______________________________*/
-	/* feedback на странице каталога */
-
-	&__feedback-container {
-		display: none;
-		position: fixed;
-		top: 330px;
-		right: calc(50% - 239px);
-
-		width: 478px;
-		height: 441px;
-
-		background: #F8F7F4;
-		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
-		border-radius: 4px;
-
-		z-index: 3;
-
-		padding: 23px;
-	}
-
-	&__feedback {
-		display: flex;
-		flex-direction: column;
-	}
-
-	&__feedback-heading {
-		font-weight: 600;
-		font-size: 24px;
-		line-height: 28px;
-	
-		color: #323232;
-
-		margin-bottom: 24px
-	}
-
-	&__feedback-input {
-		width: 267px;
-		height: 44px;
-
-		margin-bottom: 20px;
-	}
-
-	&__feedback-textarea {
-		min-width: 100%;
-		max-width: 100%;
-		min-height: 154px;
-		max-height: 154px;
-
-
-		margin-bottom: 20px;
-
-		padding: 15px
-
-	}
-
-	&__feedback-flex {
-		display: flex;
-		justify-content: flex-end;
-	}
-
-	&__feedback-button {
-		width: 140px;
-		height: 44px;
-	}
 }
-
-
 
 
 .menu {
@@ -414,7 +348,6 @@
 	&__link {
 		display: block;
 		
-
 		font-weight: bold;
 		font-size: 16px;
 		line-height: 18px;
@@ -490,8 +423,6 @@
 			display: none;
 		}
 
-
-
 		&:last-child {
 			margin-bottom: 6px;
 		}
@@ -500,8 +431,6 @@
 			background-color: #FBDED7;
 			border-radius: 4px;
 		}
-
-
 
 		&:active {
 			background-color: #F6B5A5;
@@ -526,16 +455,4 @@
 		background: #FFFFFF;
 		border-radius: 26px;
 	}
-
-	//Видимость меню каталога
-	/* &__main:hover .menu__submenu {
-		display: block;
-	}
- */
-
-	/* &__catalog:hover .menu__submenu {
-		display: block;
-	} */
-
-	
 }
