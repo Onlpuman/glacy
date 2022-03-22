@@ -53,6 +53,22 @@
 	margin: 0 auto;
 }
 
+.input {
+	background: #FFF;
+	border: 1px solid #D3D3D2;
+	border-radius: 4px;
+
+	font-size: 14px;
+	line-height: 16px;
+	outline: 0;
+
+	padding-left: 15px;
+
+	&:hover {
+		box-shadow: 0 0 1px 2px #d7d7d7;
+		transition: box-shadow 0.08s linear;
+	}
+}
 
 main {
 	/* Прибиваю футер */

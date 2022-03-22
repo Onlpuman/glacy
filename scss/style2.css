@@ -132,6 +132,20 @@ body img {
   margin: 0 auto;
 }
 
+.input {
+  background: #FFF;
+  border: 1px solid #D3D3D2;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 16px;
+  outline: 0;
+  padding-left: 15px;
+}
+.input:hover {
+  box-shadow: 0 0 1px 2px #d7d7d7;
+  transition: box-shadow 0.08s linear;
+}
+
 main {
   /* Прибиваю футер */
   flex: 1 1 auto;
@@ -217,18 +231,6 @@ main {
 }
 .nav__basket-catalog {
   width: 118px;
-}
-.nav .input {
-  background: #FFF;
-  border: 1px solid #D3D3D2;
-  border-radius: 4px;
-  font-size: 14px;
-  line-height: 16px;
-  outline: 0;
-  padding-left: 15px;
-}
-.nav .input:hover {
-  box-shadow: 0 0 1px 2px #d7d7d7;
 }
 .nav__search-form {
   position: absolute;
@@ -538,18 +540,6 @@ main {
 .feedback__form-button {
   width: 140px;
   height: 44px;
-}
-.feedback .input {
-  background: #FFF;
-  border: 1px solid #D3D3D2;
-  border-radius: 4px;
-  font-size: 14px;
-  line-height: 16px;
-  outline: 0;
-  padding-left: 15px;
-}
-.feedback .input:hover {
-  box-shadow: 0 0 1px 2px #d7d7d7;
 }
 
 .catalog {
