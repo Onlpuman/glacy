@@ -135,7 +135,6 @@ navEntryLink.addEventListener("click", () => {
 
 feedback.addEventListener("click", () => {
     feedback.style.display = 'none';
-    navFeedback.style.display = 'none';
 })
 
 /*propagation.onclick = (event) => {
