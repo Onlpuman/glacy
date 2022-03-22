@@ -125,21 +125,23 @@ function createButtonDropdown(activeButton, activeMenu) {
 const navEntryLink = document.querySelector('.js-nav_entry-link');
 const navFeedback = document.querySelector('.feedback__form');
 const feedback = document.querySelector('.feedback');
-const propagation = document.querySelector('.feedback__form .feedback');
+//const propagation = document.querySelector('.feedback__form .feedback');
 
 
 navEntryLink.addEventListener("click", () => {
+    feedback.style.display = 'flex';
     navFeedback.style.display = 'flex';
 })
 
 feedback.addEventListener("click", () => {
+    feedback.style.display = 'none';
     navFeedback.style.display = 'none';
 })
 
-propagation.onclick = (event) => {
+/*propagation.onclick = (event) => {
      event.stopPropagation();
 }
-
+*/
 
 // Слайдер bullets //
 
