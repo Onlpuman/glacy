@@ -22,38 +22,37 @@ const navMenuForm = document.querySelector('.menu__submenu');
 createMenuDropdown(navMenuLink, navMenuForm)
 
 function createMenuDropdown(activeLink, activeForm) {
-    let timeoutId;
+	let timeoutId;
 
-    activeLink.addEventListener('mouseenter', () => { /* 1_Наводим мышь на кнопку */
-                
-        buttons.forEach(removeActive);                      /* 1--Убираем подложку у ВСЕХ КНОПОК*/
+	activeLink.addEventListener('mouseenter', () => {
 
-        function removeActive(button) {                             /* */
-            button.classList.remove('link-js-active');              /* */
-        }
+		buttons.forEach(removeActive);
 
-        clearTimeout(timeoutId);                            /*Обнуляем таймер*/
-        activeLink.classList.add('link-js-active');          /* 1--Включаем подложку КНОПКИ*/
-        activeForm.style.display = 'block';                  /* 1--Включаем видимость ФОРМЫ SUBMENU*/
-    })
+		function removeActive(button) {
+			button.classList.remove('link-js-active');
+		}
 
-    activeLink.addEventListener('mouseleave', () => {       /* 2--Уводим мышь с кнопки*/
-        timeoutId = setTimeout(() => {                      /* 2--Ставим таймер*/
-            activeForm.style.display = 'none';              /* 2--Убираем видимость ФОРМЫ */  
-            activeLink.classList.remove('link-js-active');  /* 2--Убираем подложку КНОПКИ*/
-        }, 200);
-    })
+		clearTimeout(timeoutId);
+		activeLink.classList.add('link-js-active');
+		activeForm.style.display = 'block';
+	})
 
-    activeForm.addEventListener('mouseenter', () => {       /* 3--Наводим мышь на форму*/
-        clearTimeout(timeoutId);                            /* 3--Обнуляем таймер*/
-    })
+	activeLink.addEventListener('mouseleave', () => {
+		timeoutId = setTimeout(() => {
+			activeForm.style.display = 'none';
+			activeLink.classList.remove('link-js-active');
+		}, 200);
+	})
 
-    activeForm.addEventListener('mouseleave', () => {       /* 4--Уводим мышь с формы*/
-        timeoutId = setTimeout(() => {                      /* 4--Ставим таймер*/
-            activeForm.style.display = 'none';              /* 4--Убираем видимость ФОРМЫ*/
-            activeLink.classList.remove('link-js-active');  /* 4--Убираем подложку КНОПКИ*/
-        }, 200);
-    }) 
+	activeForm.addEventListener('mouseenter', () => {
+	})
+
+	activeForm.addEventListener('mouseleave', () => {
+		timeoutId = setTimeout(() => {
+			activeForm.style.display = 'none';
+			activeLink.classList.remove('link-js-active');
+		}, 200);
+	})
 }
 
 createButtonDropdown(navSearch, navSearchForm);
@@ -61,134 +60,139 @@ createButtonDropdown(navEntry, navEntryForm);
 createButtonDropdown(navBasket, navBasketForm);
 
 function createButtonDropdown(activeButton, activeMenu) {
-    let timeoutId;
+	let timeoutId;
 
-    if (activeButton.classList.contains('js-noform')) {
-        activeButton.addEventListener('mouseenter', () => { /* 1_Наводим мышь на кнопку */
-                    
-            buttons.forEach(removeActive);                      /* 1--Убираем подложку у ВСЕХ КНОПОК*/
+	if (activeButton.classList.contains('js-noform')) {
+		activeButton.addEventListener('mouseenter', () => { /* 1_Наводим мышь на кнопку */
 
-            function removeActive(button) {                     /* */
-                button.classList.remove('active');              /* */
-            }
+			buttons.forEach(removeActive);                      /* 1--Убираем подложку у ВСЕХ КНОПОК*/
 
-            forms.forEach(form => form.style.display = 'none'); /* 1--Убираем видимость ВСЕХ ФОРМ*/
+			function removeActive(button) {                     /* */
+				button.classList.remove('active');              /* */
+			}
 
-            clearTimeout(timeoutId);                            /*Обнуляем таймер*/
-            activeButton.classList.add('active');               /* 1--Включаем подложку КНОПКИ*/
-        })
+			forms.forEach(form => form.style.display = 'none'); /* 1--Убираем видимость ВСЕХ ФОРМ*/
 
-        activeButton.addEventListener('mouseleave', () => { /* 2--Уводим мышь с кнопки*/
-            timeoutId = setTimeout(() => {                    /* 2--Ставим таймер*/ 
-                activeButton.classList.remove('active');         /* 2--Убираем подложку КНОПКИ*/
-            }, 100);
-        })
+			clearTimeout(timeoutId);                            /*Обнуляем таймер*/
+			activeButton.classList.add('active');               /* 1--Включаем подложку КНОПКИ*/
+		})
 
-    } else {
+		activeButton.addEventListener('mouseleave', () => { /* 2--Уводим мышь с кнопки*/
+			timeoutId = setTimeout(() => {                    /* 2--Ставим таймер*/
+				activeButton.classList.remove('active');         /* 2--Убираем подложку КНОПКИ*/
+			}, 100);
+		})
 
-        activeButton.addEventListener('mouseenter', () => { /* 1_Наводим мышь на кнопку */
-                    
-            buttons.forEach(removeActive);                      /* 1--Убираем подложку у ВСЕХ КНОПОК*/
+	} else {
 
-            function removeActive(button) {                     /* */
-                button.classList.remove('active');              /* */
-            }
+		activeButton.addEventListener('mouseenter', () => { /* 1_Наводим мышь на кнопку */
 
-            forms.forEach(form => form.style.display = 'none'); /* 1--Убираем видимость ВСЕХ ФОРМ*/
+			buttons.forEach(removeActive);                      /* 1--Убираем подложку у ВСЕХ КНОПОК*/
 
-            clearTimeout(timeoutId);                            /*Обнуляем таймер*/
-            activeButton.classList.add('active');               /* 1--Включаем подложку КНОПКИ*/
-            activeMenu.style.display = 'flex';                  /* 1--Включаем видимость ФОРМЫ*/
-        })
+			function removeActive(button) {                     /* */
+				button.classList.remove('active');              /* */
+			}
 
-        activeButton.addEventListener('mouseleave', () => { /* 2--Уводим мышь с кнопки*/
-            timeoutId = setTimeout(() => {                    /* 2--Ставим таймер*/
-                activeMenu.style.display = 'none';               /* 2--Убираем видимость ФОРМЫ*/  
-                activeButton.classList.remove('active');         /* 2--Убираем подложку КНОПКИ*/
-            }, 100);
-        })
+			forms.forEach(form => form.style.display = 'none'); /* 1--Убираем видимость ВСЕХ ФОРМ*/
 
-        activeMenu.addEventListener('mouseenter', () => {   /* 3--Наводим мышь на форму*/
-            clearTimeout(timeoutId);                          /* 3--Обнуляем таймер*/
-        })
+			clearTimeout(timeoutId);                            /*Обнуляем таймер*/
+			activeButton.classList.add('active');               /* 1--Включаем подложку КНОПКИ*/
+			activeMenu.style.display = 'flex';                  /* 1--Включаем видимость ФОРМЫ*/
+		})
 
-        activeMenu.addEventListener('mouseleave', () => {   /* 4--Уводим мышь с формы*/
-            timeoutId = setTimeout(() => {                    /* 4--Ставим таймер*/
-                activeMenu.style.display = 'none';              /* 4--Убираем видимость ФОРМЫ*/
-                activeButton.classList.remove('active');        /* 4--Убираем подложку КНОПКИ*/
-            }, 100);
-        })
-    }
+		activeButton.addEventListener('mouseleave', () => { /* 2--Уводим мышь с кнопки*/
+			timeoutId = setTimeout(() => {                    /* 2--Ставим таймер*/
+				activeMenu.style.display = 'none';               /* 2--Убираем видимость ФОРМЫ*/
+				activeButton.classList.remove('active');         /* 2--Убираем подложку КНОПКИ*/
+			}, 100);
+		})
+
+		activeMenu.addEventListener('mouseenter', () => {   /* 3--Наводим мышь на форму*/
+			clearTimeout(timeoutId);                          /* 3--Обнуляем таймер*/
+		})
+
+		activeMenu.addEventListener('mouseleave', () => {   /* 4--Уводим мышь с формы*/
+			timeoutId = setTimeout(() => {                    /* 4--Ставим таймер*/
+				activeMenu.style.display = 'none';              /* 4--Убираем видимость ФОРМЫ*/
+				activeButton.classList.remove('active');        /* 4--Убираем подложку КНОПКИ*/
+			}, 100);
+		})
+	}
 }
 
 // Отображение feedback
 const navEntryLink = document.querySelector('.js-nav_entry-link');
-const navFeedback = document.querySelector('.feedback__form');
-const feedback = document.querySelector('.feedback');
-//const propagation = document.querySelector('.feedback__form .feedback');
+const navFeedbackFormContainer = document.querySelector('.feedback');
+const navFeedbackForm = document.querySelector('.feedback__form');
+const navFeedbackClose = document.querySelector('.feedback__form-close')
 
-
-navEntryLink.addEventListener("click", () => {
-    feedback.style.display = 'flex';
-    navFeedback.style.display = 'flex';
+navEntryLink.addEventListener('click', () => {
+	navFeedbackFormContainer.style.display = 'flex';
+	navFeedbackForm.style.display = 'flex';
 })
 
-feedback.addEventListener("click", () => {
-    feedback.style.display = 'none';
+navFeedbackClose.addEventListener('click', () => {
+	navFeedbackFormContainer.style.display = 'none';
+	navFeedbackForm.style.display = 'none';
 })
 
-/*propagation.onclick = (event) => {
-     event.stopPropagation();
-}
-*/
+navFeedbackFormContainer.addEventListener('click', () => {
+	navFeedbackFormContainer.style.display = 'none';
+	navFeedbackForm.style.display = 'none';
+})
+
+navFeedbackForm.addEventListener('click', (event) => {
+	event.stopPropagation();
+});
+
 
 // Слайдер bullets //
 
-var bullet1 = document.querySelector(".performance__slider button:nth-child(1)");
-var bullet2 = document.querySelector(".performance__slider button:nth-child(2)");
-var bullet3 = document.querySelector(".performance__slider button:nth-child(3)");
-var bg = document.querySelector(".site__bg-1");
-var sliderTitle1 = document.querySelector(".performance div:nth-child(1)");
-var sliderTitle2 = document.querySelector(".performance div:nth-child(2)");
-var sliderTitle3 = document.querySelector(".performance div:nth-child(3)");
+const bullet1 = document.querySelector('.performance__slider button:nth-child(1)');
+const bullet2 = document.querySelector('.performance__slider button:nth-child(2)');
+const bullet3 = document.querySelector('.performance__slider button:nth-child(3)');
+const bg = document.querySelector('.site__bg-1');
+const sliderTitle1 = document.querySelector('.performance div:nth-child(1)');
+const sliderTitle2 = document.querySelector('.performance div:nth-child(2)');
+const sliderTitle3 = document.querySelector('.performance div:nth-child(3)');
 
 
 if (bullet1) {
-       bullet1.addEventListener("click", function () {
-              bullet1.classList.add("current");
-              bullet2.classList.remove("current");
-              bullet3.classList.remove("current");
-              bg.classList.add("site__bg-1");
-              bg.classList.remove("site__bg-2");
-              bg.classList.remove("site__bg-3");
-              sliderTitle1.classList.add("slide-current");
-              sliderTitle2.classList.remove("slide-current");
-              sliderTitle3.classList.remove("slide-current");
-       });
+	bullet1.addEventListener('click', function () {
+		bullet1.classList.add('current');
+		bullet2.classList.remove('current');
+		bullet3.classList.remove('current');
+		bg.classList.add('site__bg-1');
+		bg.classList.remove('site__bg-2');
+		bg.classList.remove('site__bg-3');
+		sliderTitle1.classList.add('slide-current');
+		sliderTitle2.classList.remove('slide-current');
+		sliderTitle3.classList.remove('slide-current');
+	});
 
-       bullet2.addEventListener("click", function () {
-              bullet1.classList.remove("current");
-              bullet2.classList.add("current");
-              bullet3.classList.remove("current");
-              bg.classList.remove("site__bg-1");
-              bg.classList.add("site__bg-2");
-              bg.classList.remove("site__bg-3");
-              sliderTitle1.classList.remove("slide-current");
-              sliderTitle2.classList.add("slide-current");
-              sliderTitle3.classList.remove("slide-current");
-       });
+	bullet2.addEventListener('click', function () {
+		bullet1.classList.remove('current');
+		bullet2.classList.add('current');
+		bullet3.classList.remove('current');
+		bg.classList.remove('site__bg-1');
+		bg.classList.add('site__bg-2');
+		bg.classList.remove('site__bg-3');
+		sliderTitle1.classList.remove('slide-current');
+		sliderTitle2.classList.add('slide-current');
+		sliderTitle3.classList.remove('slide-current');
+	});
 
-       bullet3.addEventListener("click", function () {
-              bullet1.classList.remove("current");
-              bullet2.classList.remove("current");
-              bullet3.classList.add("current");
-              bg.classList.remove("site__bg-1");
-              bg.classList.remove("site__bg-2");
-              bg.classList.add("site__bg-3");
-              sliderTitle1.classList.remove("slide-current");
-              sliderTitle2.classList.remove("slide-current");
-              sliderTitle3.classList.add("slide-current");
-       });
+	bullet3.addEventListener('click', function () {
+		bullet1.classList.remove('current');
+		bullet2.classList.remove('current');
+		bullet3.classList.add('current');
+		bg.classList.remove('site__bg-1');
+		bg.classList.remove('site__bg-2');
+		bg.classList.add('site__bg-3');
+		sliderTitle1.classList.remove('slide-current');
+		sliderTitle2.classList.remove('slide-current');
+		sliderTitle3.classList.add('slide-current');
+	});
 }
 
 
