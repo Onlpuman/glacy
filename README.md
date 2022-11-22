@@ -1,5 +1,3 @@
-This is my first website development project.
-
 https://onlpuman.github.io/glacy/
 
 ![](https://user-images.githubusercontent.com/94569843/195475945-d45f2bc7-54da-4a58-b46c-02250fcb0c4f.png)
