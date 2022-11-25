@@ -14,113 +14,108 @@ const navBasketForm = document.querySelector('.nav__basket-container');
 const buttons = document.querySelectorAll('.js-nav-item');
 const forms = document.querySelectorAll('.js-nav-dropdown');
 
-const navMenuLinks = document.querySelectorAll('.menu__link');
 const navMenuLink = document.querySelector('.menu__link');
-const navMenuForm = document.querySelector('.menu__submenu');
+const navSubmenu = document.querySelector('.menu__submenu');
 
 
-createMenuDropdown(navMenuLink, navMenuForm)
-
-function createMenuDropdown(activeLink, activeForm) {
+createMenuDropdown = (activeLink, activeSubmenu) => {
 	let timeoutId;
 
 	activeLink.addEventListener('mouseenter', () => {
 
+		removeActive = button => button.classList.remove('link-js-active');
+		
 		buttons.forEach(removeActive);
-
-		function removeActive(button) {
-			button.classList.remove('link-js-active');
-		}
 
 		clearTimeout(timeoutId);
 		activeLink.classList.add('link-js-active');
-		activeForm.style.display = 'block';
+		activeSubmenu.style.display = 'block';
 	})
 
 	activeLink.addEventListener('mouseleave', () => {
 		timeoutId = setTimeout(() => {
-			activeForm.style.display = 'none';
+			activeSubmenu.style.display = 'none';
 			activeLink.classList.remove('link-js-active');
 		}, 200);
 	})
 
-	activeForm.addEventListener('mouseenter', () => {
+	activeSubmenu.addEventListener('mouseenter', () => {
+		clearTimeout(timeoutId);
 	})
 
-	activeForm.addEventListener('mouseleave', () => {
+	activeSubmenu.addEventListener('mouseleave', () => {
 		timeoutId = setTimeout(() => {
-			activeForm.style.display = 'none';
+			activeSubmenu.style.display = 'none';
 			activeLink.classList.remove('link-js-active');
 		}, 200);
 	})
+}
+
+createMenuDropdown(navMenuLink, navSubmenu);
+
+createButtonDropdown = (activeButton, activeMenu) => {
+	let timeoutId;
+
+	if (activeButton.classList.contains('js-noform')) {
+		activeButton.addEventListener('mouseenter', () => {
+
+			buttons.forEach(removeActive);
+
+			removeActive = button => button.classList.remove('active');
+
+			forms.forEach(form => form.style.display = 'none');
+
+			clearTimeout(timeoutId);
+			activeButton.classList.add('active');
+		})
+
+		activeButton.addEventListener('mouseleave', () => {
+			timeoutId = setTimeout(() => {
+				activeButton.classList.remove('active');
+			}, 100);
+		})
+
+	} else {
+
+		activeButton.addEventListener('mouseenter', () => {
+
+			buttons.forEach(removeActive);
+
+			removeActive = button => button.classList.remove('active');
+
+			forms.forEach(form => form.style.display = 'none');
+
+			clearTimeout(timeoutId);
+			activeButton.classList.add('active');
+			activeMenu.style.display = 'flex';
+		})
+
+		activeButton.addEventListener('mouseleave', () => {
+			timeoutId = setTimeout(() => {
+				activeMenu.style.display = 'none';
+				activeButton.classList.remove('active');
+			}, 100);
+		})
+
+		activeMenu.addEventListener('mouseenter', () => {
+			clearTimeout(timeoutId);
+		})
+
+		activeMenu.addEventListener('mouseleave', () => {
+			timeoutId = setTimeout(() => {
+				activeMenu.style.display = 'none';
+				activeButton.classList.remove('active');
+			}, 100);
+		})
+	}
 }
 
 createButtonDropdown(navSearch, navSearchForm);
 createButtonDropdown(navEntry, navEntryForm);
 createButtonDropdown(navBasket, navBasketForm);
 
-function createButtonDropdown(activeButton, activeMenu) {
-	let timeoutId;
-
-	if (activeButton.classList.contains('js-noform')) {
-		activeButton.addEventListener('mouseenter', () => { /* 1_Наводим мышь на кнопку */
-
-			buttons.forEach(removeActive);                      /* 1--Убираем подложку у ВСЕХ КНОПОК*/
-
-			function removeActive(button) {                     /* */
-				button.classList.remove('active');              /* */
-			}
-
-			forms.forEach(form => form.style.display = 'none'); /* 1--Убираем видимость ВСЕХ ФОРМ*/
-
-			clearTimeout(timeoutId);                            /*Обнуляем таймер*/
-			activeButton.classList.add('active');               /* 1--Включаем подложку КНОПКИ*/
-		})
-
-		activeButton.addEventListener('mouseleave', () => { /* 2--Уводим мышь с кнопки*/
-			timeoutId = setTimeout(() => {                    /* 2--Ставим таймер*/
-				activeButton.classList.remove('active');         /* 2--Убираем подложку КНОПКИ*/
-			}, 100);
-		})
-
-	} else {
-
-		activeButton.addEventListener('mouseenter', () => { /* 1_Наводим мышь на кнопку */
-
-			buttons.forEach(removeActive);                      /* 1--Убираем подложку у ВСЕХ КНОПОК*/
-
-			function removeActive(button) {                     /* */
-				button.classList.remove('active');              /* */
-			}
-
-			forms.forEach(form => form.style.display = 'none'); /* 1--Убираем видимость ВСЕХ ФОРМ*/
-
-			clearTimeout(timeoutId);                            /*Обнуляем таймер*/
-			activeButton.classList.add('active');               /* 1--Включаем подложку КНОПКИ*/
-			activeMenu.style.display = 'flex';                  /* 1--Включаем видимость ФОРМЫ*/
-		})
-
-		activeButton.addEventListener('mouseleave', () => { /* 2--Уводим мышь с кнопки*/
-			timeoutId = setTimeout(() => {                    /* 2--Ставим таймер*/
-				activeMenu.style.display = 'none';               /* 2--Убираем видимость ФОРМЫ*/
-				activeButton.classList.remove('active');         /* 2--Убираем подложку КНОПКИ*/
-			}, 100);
-		})
-
-		activeMenu.addEventListener('mouseenter', () => {   /* 3--Наводим мышь на форму*/
-			clearTimeout(timeoutId);                          /* 3--Обнуляем таймер*/
-		})
-
-		activeMenu.addEventListener('mouseleave', () => {   /* 4--Уводим мышь с формы*/
-			timeoutId = setTimeout(() => {                    /* 4--Ставим таймер*/
-				activeMenu.style.display = 'none';              /* 4--Убираем видимость ФОРМЫ*/
-				activeButton.classList.remove('active');        /* 4--Убираем подложку КНОПКИ*/
-			}, 100);
-		})
-	}
-}
-
 // Отображение feedback
+
 const navEntryLink = document.querySelector('.js-nav_entry-link');
 const navFeedbackFormContainer = document.querySelector('.feedback');
 const navFeedbackForm = document.querySelector('.feedback__form');
@@ -158,7 +153,7 @@ const sliderTitle3 = document.querySelector('.performance div:nth-child(3)');
 
 
 if (bullet1) {
-	bullet1.addEventListener('click', function () {
+	bullet1.addEventListener('click', () => {
 		bullet1.classList.add('current');
 		bullet2.classList.remove('current');
 		bullet3.classList.remove('current');
@@ -170,7 +165,7 @@ if (bullet1) {
 		sliderTitle3.classList.remove('slide-current');
 	});
 
-	bullet2.addEventListener('click', function () {
+	bullet2.addEventListener('click',() => {
 		bullet1.classList.remove('current');
 		bullet2.classList.add('current');
 		bullet3.classList.remove('current');
@@ -182,7 +177,7 @@ if (bullet1) {
 		sliderTitle3.classList.remove('slide-current');
 	});
 
-	bullet3.addEventListener('click', function () {
+	bullet3.addEventListener('click',() => {
 		bullet1.classList.remove('current');
 		bullet2.classList.remove('current');
 		bullet3.classList.add('current');
@@ -194,6 +189,3 @@ if (bullet1) {
 		sliderTitle3.classList.add('slide-current');
 	});
 }
-
-
-
